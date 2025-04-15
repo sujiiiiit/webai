@@ -1,3 +1,4 @@
+'use client'
 import type { WebContainer } from '@webcontainer/api';
 import { atom } from 'nanostores';
 
