@@ -296,7 +296,7 @@ export function DataTab() {
                   <motion.div className="text-accent-500 mr-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                     <div className="i-ph-download-duotone w-5 h-5" />
                   </motion.div>
-                  <CardTitle className="text-lg group-hover:text-bolt-elements-item-contentAccent transition-colors">
+                  <CardTitle className="text-lg group-hover:text-webai-elements-item-contentAccent transition-colors">
                     Export All Chats
                   </CardTitle>
                 </div>
@@ -335,7 +335,7 @@ export function DataTab() {
                     variant="outline"
                     size="sm"
                     className={classNames(
-                      'hover:text-bolt-elements-item-contentAccent hover:border-bolt-elements-item-backgroundAccent hover:bg-bolt-elements-item-backgroundAccent transition-colors w-full justify-center',
+                      'hover:text-webai-elements-item-contentAccent hover:border-webai-elements-item-backgroundAccent hover:bg-webai-elements-item-backgroundAccent transition-colors w-full justify-center',
                       isExporting || availableChats.length === 0 ? 'cursor-not-allowed' : '',
                     )}
                   >
@@ -360,7 +360,7 @@ export function DataTab() {
                   <motion.div className="text-accent-500 mr-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                     <div className="i-ph-filter-duotone w-5 h-5" />
                   </motion.div>
-                  <CardTitle className="text-lg group-hover:text-bolt-elements-item-contentAccent transition-colors">
+                  <CardTitle className="text-lg group-hover:text-webai-elements-item-contentAccent transition-colors">
                     Export Selected Chats
                   </CardTitle>
                 </div>
@@ -374,7 +374,7 @@ export function DataTab() {
                     variant="outline"
                     size="sm"
                     className={classNames(
-                      'hover:text-bolt-elements-item-contentAccent hover:border-bolt-elements-item-backgroundAccent hover:bg-bolt-elements-item-backgroundAccent transition-colors w-full justify-center',
+                      'hover:text-webai-elements-item-contentAccent hover:border-webai-elements-item-backgroundAccent hover:bg-webai-elements-item-backgroundAccent transition-colors w-full justify-center',
                       isExporting || chatItems.length === 0 ? 'cursor-not-allowed' : '',
                     )}
                   >
@@ -397,7 +397,7 @@ export function DataTab() {
                   <motion.div className="text-accent-500 mr-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                     <div className="i-ph-upload-duotone w-5 h-5" />
                   </motion.div>
-                  <CardTitle className="text-lg group-hover:text-bolt-elements-item-contentAccent transition-colors">
+                  <CardTitle className="text-lg group-hover:text-webai-elements-item-contentAccent transition-colors">
                     Import Chats
                   </CardTitle>
                 </div>
@@ -411,7 +411,7 @@ export function DataTab() {
                     variant="outline"
                     size="sm"
                     className={classNames(
-                      'hover:text-bolt-elements-item-contentAccent hover:border-bolt-elements-item-backgroundAccent hover:bg-bolt-elements-item-backgroundAccent transition-colors w-full justify-center',
+                      'hover:text-webai-elements-item-contentAccent hover:border-webai-elements-item-backgroundAccent hover:bg-webai-elements-item-backgroundAccent transition-colors w-full justify-center',
                       isImporting ? 'cursor-not-allowed' : '',
                     )}
                   >
@@ -438,7 +438,7 @@ export function DataTab() {
                   >
                     <div className="i-ph-trash-duotone w-5 h-5" />
                   </motion.div>
-                  <CardTitle className="text-lg group-hover:text-bolt-elements-item-contentAccent transition-colors">
+                  <CardTitle className="text-lg group-hover:text-webai-elements-item-contentAccent transition-colors">
                     Delete All Chats
                   </CardTitle>
                 </div>
@@ -452,7 +452,7 @@ export function DataTab() {
                     variant="outline"
                     size="sm"
                     className={classNames(
-                      'hover:text-bolt-elements-item-contentAccent hover:border-bolt-elements-item-backgroundAccent hover:bg-bolt-elements-item-backgroundAccent transition-colors w-full justify-center',
+                      'hover:text-webai-elements-item-contentAccent hover:border-webai-elements-item-backgroundAccent hover:bg-webai-elements-item-backgroundAccent transition-colors w-full justify-center',
                       isDeleting || chatItems.length === 0 ? 'cursor-not-allowed' : '',
                     )}
                   >
@@ -482,7 +482,7 @@ export function DataTab() {
                 <motion.div className="text-accent-500 mr-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                   <div className="i-ph-download-duotone w-5 h-5" />
                 </motion.div>
-                <CardTitle className="text-lg group-hover:text-bolt-elements-item-contentAccent transition-colors">
+                <CardTitle className="text-lg group-hover:text-webai-elements-item-contentAccent transition-colors">
                   Export All Settings
                 </CardTitle>
               </div>
@@ -496,7 +496,7 @@ export function DataTab() {
                   variant="outline"
                   size="sm"
                   className={classNames(
-                    'hover:text-bolt-elements-item-contentAccent hover:border-bolt-elements-item-backgroundAccent hover:bg-bolt-elements-item-backgroundAccent transition-colors w-full justify-center',
+                    'hover:text-webai-elements-item-contentAccent hover:border-webai-elements-item-backgroundAccent hover:bg-webai-elements-item-backgroundAccent transition-colors w-full justify-center',
                     isExporting ? 'cursor-not-allowed' : '',
                   )}
                 >
@@ -519,7 +519,7 @@ export function DataTab() {
                 <motion.div className="text-accent-500 mr-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                   <div className="i-ph-filter-duotone w-5 h-5" />
                 </motion.div>
-                <CardTitle className="text-lg group-hover:text-bolt-elements-item-contentAccent transition-colors">
+                <CardTitle className="text-lg group-hover:text-webai-elements-item-contentAccent transition-colors">
                   Export Selected Settings
                 </CardTitle>
               </div>
@@ -533,7 +533,7 @@ export function DataTab() {
                   variant="outline"
                   size="sm"
                   className={classNames(
-                    'hover:text-bolt-elements-item-contentAccent hover:border-bolt-elements-item-backgroundAccent hover:bg-bolt-elements-item-backgroundAccent transition-colors w-full justify-center',
+                    'hover:text-webai-elements-item-contentAccent hover:border-webai-elements-item-backgroundAccent hover:bg-webai-elements-item-backgroundAccent transition-colors w-full justify-center',
                     isExporting || settingsCategories.length === 0 ? 'cursor-not-allowed' : '',
                   )}
                 >
@@ -556,7 +556,7 @@ export function DataTab() {
                 <motion.div className="text-accent-500 mr-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                   <div className="i-ph-upload-duotone w-5 h-5" />
                 </motion.div>
-                <CardTitle className="text-lg group-hover:text-bolt-elements-item-contentAccent transition-colors">
+                <CardTitle className="text-lg group-hover:text-webai-elements-item-contentAccent transition-colors">
                   Import Settings
                 </CardTitle>
               </div>
@@ -570,7 +570,7 @@ export function DataTab() {
                   variant="outline"
                   size="sm"
                   className={classNames(
-                    'hover:text-bolt-elements-item-contentAccent hover:border-bolt-elements-item-backgroundAccent hover:bg-bolt-elements-item-backgroundAccent transition-colors w-full justify-center',
+                    'hover:text-webai-elements-item-contentAccent hover:border-webai-elements-item-backgroundAccent hover:bg-webai-elements-item-backgroundAccent transition-colors w-full justify-center',
                     isImporting ? 'cursor-not-allowed' : '',
                   )}
                 >
@@ -597,7 +597,7 @@ export function DataTab() {
                 >
                   <div className="i-ph-arrow-counter-clockwise-duotone w-5 h-5" />
                 </motion.div>
-                <CardTitle className="text-lg group-hover:text-bolt-elements-item-contentAccent transition-colors">
+                <CardTitle className="text-lg group-hover:text-webai-elements-item-contentAccent transition-colors">
                   Reset All Settings
                 </CardTitle>
               </div>
@@ -611,7 +611,7 @@ export function DataTab() {
                   variant="outline"
                   size="sm"
                   className={classNames(
-                    'hover:text-bolt-elements-item-contentAccent hover:border-bolt-elements-item-backgroundAccent hover:bg-bolt-elements-item-backgroundAccent transition-colors w-full justify-center',
+                    'hover:text-webai-elements-item-contentAccent hover:border-webai-elements-item-backgroundAccent hover:bg-webai-elements-item-backgroundAccent transition-colors w-full justify-center',
                     isResetting ? 'cursor-not-allowed' : '',
                   )}
                 >
@@ -640,7 +640,7 @@ export function DataTab() {
                 <motion.div className="text-accent-500 mr-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                   <div className="i-ph-download-duotone w-5 h-5" />
                 </motion.div>
-                <CardTitle className="text-lg group-hover:text-bolt-elements-item-contentAccent transition-colors">
+                <CardTitle className="text-lg group-hover:text-webai-elements-item-contentAccent transition-colors">
                   Export API Keys
                 </CardTitle>
               </div>
@@ -654,7 +654,7 @@ export function DataTab() {
                   variant="outline"
                   size="sm"
                   className={classNames(
-                    'hover:text-bolt-elements-item-contentAccent hover:border-bolt-elements-item-backgroundAccent hover:bg-bolt-elements-item-backgroundAccent transition-colors w-full justify-center',
+                    'hover:text-webai-elements-item-contentAccent hover:border-webai-elements-item-backgroundAccent hover:bg-webai-elements-item-backgroundAccent transition-colors w-full justify-center',
                     isExporting ? 'cursor-not-allowed' : '',
                   )}
                 >
@@ -677,7 +677,7 @@ export function DataTab() {
                 <motion.div className="text-accent-500 mr-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                   <div className="i-ph-file-text-duotone w-5 h-5" />
                 </motion.div>
-                <CardTitle className="text-lg group-hover:text-bolt-elements-item-contentAccent transition-colors">
+                <CardTitle className="text-lg group-hover:text-webai-elements-item-contentAccent transition-colors">
                   Download Template
                 </CardTitle>
               </div>
@@ -691,7 +691,7 @@ export function DataTab() {
                   variant="outline"
                   size="sm"
                   className={classNames(
-                    'hover:text-bolt-elements-item-contentAccent hover:border-bolt-elements-item-backgroundAccent hover:bg-bolt-elements-item-backgroundAccent transition-colors w-full justify-center',
+                    'hover:text-webai-elements-item-contentAccent hover:border-webai-elements-item-backgroundAccent hover:bg-webai-elements-item-backgroundAccent transition-colors w-full justify-center',
                     isDownloadingTemplate ? 'cursor-not-allowed' : '',
                   )}
                 >
@@ -714,7 +714,7 @@ export function DataTab() {
                 <motion.div className="text-accent-500 mr-2" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                   <div className="i-ph-upload-duotone w-5 h-5" />
                 </motion.div>
-                <CardTitle className="text-lg group-hover:text-bolt-elements-item-contentAccent transition-colors">
+                <CardTitle className="text-lg group-hover:text-webai-elements-item-contentAccent transition-colors">
                   Import API Keys
                 </CardTitle>
               </div>
@@ -728,7 +728,7 @@ export function DataTab() {
                   variant="outline"
                   size="sm"
                   className={classNames(
-                    'hover:text-bolt-elements-item-contentAccent hover:border-bolt-elements-item-backgroundAccent hover:bg-bolt-elements-item-backgroundAccent transition-colors w-full justify-center',
+                    'hover:text-webai-elements-item-contentAccent hover:border-webai-elements-item-backgroundAccent hover:bg-webai-elements-item-backgroundAccent transition-colors w-full justify-center',
                     isImportingKeys ? 'cursor-not-allowed' : '',
                   )}
                 >
@@ -759,7 +759,7 @@ export function DataTab() {
 
       {/* Undo Last Operation */}
       {lastOperation && (
-        <div className="fixed bottom-4 right-4 bg-bolt-elements-bg-depth-3 text-color-primary p-4 rounded-lg shadow-lg flex items-center gap-3 z-50">
+        <div className="fixed bottom-4 right-4 bg-webai-elements-bg-depth-3 text-color-primary p-4 rounded-lg shadow-lg flex items-center gap-3 z-50">
           <div className="text-sm">
             <span className="font-medium">Last action:</span> {lastOperation.type}
           </div>
@@ -767,7 +767,7 @@ export function DataTab() {
             onClick={handleUndo}
             variant="outline"
             size="sm"
-            className="border-light text-color-primary hover:bg-bolt-elements-item-backgroundAccent hover:text-bolt-elements-item-contentAccent"
+            className="border-light text-color-primary hover:bg-webai-elements-item-backgroundAccent hover:text-webai-elements-item-contentAccent"
           >
             Undo
           </Button>

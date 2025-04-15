@@ -47,7 +47,7 @@ export function CreateBranchDialog({ isOpen, onClose, onConfirm, repository, bra
           <form onSubmit={handleSubmit}>
             <div className="space-y-4">
               <div>
-                <label htmlFor="branchName" className="block text-sm font-medium text-bolt-elements-textSecondary mb-2">
+                <label htmlFor="branchName" className="block text-sm font-medium text-webai-elements-textSecondary mb-2">
                   Branch Name
                 </label>
                 <input
@@ -70,7 +70,7 @@ export function CreateBranchDialog({ isOpen, onClose, onConfirm, repository, bra
               <div>
                 <label
                   htmlFor="sourceBranch"
-                  className="block text-sm font-medium text-bolt-elements-textSecondary mb-2"
+                  className="block text-sm font-medium text-webai-elements-textSecondary mb-2"
                 >
                   Source Branch
                 </label>
@@ -95,8 +95,8 @@ export function CreateBranchDialog({ isOpen, onClose, onConfirm, repository, bra
               </div>
 
               <div className="mt-4 p-3 bg-[#F5F5F5] dark:bg-[#1A1A1A] rounded-lg">
-                <h4 className="text-sm font-medium text-bolt-elements-textSecondary mb-2">Branch Overview</h4>
-                <ul className="space-y-2 text-sm text-bolt-elements-textSecondary">
+                <h4 className="text-sm font-medium text-webai-elements-textSecondary mb-2">Branch Overview</h4>
+                <ul className="space-y-2 text-sm text-webai-elements-textSecondary">
                   <li className="flex items-center gap-2">
                     <GitBranch className="text-lg" />
                     Repository: {repository.name}

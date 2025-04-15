@@ -136,7 +136,7 @@ const FileModifiedDropdown = memo(
                       <button
                         key={filePath}
                         onClick={() => onSelectFile(filePath)}
-                        className="w-full px-3 py-2 text-left rounded-md hover:bg-bolt-elements-background-depth-1 transition-colors group bg-transparent"
+                        className="w-full px-3 py-2 text-left rounded-md hover:bg-webai-elements-background-depth-1 transition-colors group bg-transparent"
                       >
                         <div className="flex items-center gap-2">
                             <div className="shrink-0 w-5 h-5 text-color-secondary">
@@ -148,7 +148,7 @@ const FileModifiedDropdown = memo(
                                 <span className="truncate text-sm font-medium text-color-primary">
                                   {filePath.split("/").pop()}
                                 </span>
-                                <span className="truncate text-xs text-bolt-elements-textTertiary">
+                                <span className="truncate text-xs text-webai-elements-textTertiary">
                                   {filePath}
                                 </span>
                               </div>
@@ -237,13 +237,13 @@ const FileModifiedDropdown = memo(
                   })
                 ) : (
                   <div className="flex flex-col items-center justify-center p-4 text-center">
-                    <div className="w-12 h-12 mb-2 text-bolt-elements-textTertiary">
+                    <div className="w-12 h-12 mb-2 text-webai-elements-textTertiary">
                       <FileIcon size={32} className="text-color-secondary" />
                     </div>
                     <p className="text-sm font-medium text-color-primary">
                       {searchQuery ? "No matching files" : "No modified files"}
                     </p>
-                    <p className="text-xs text-bolt-elements-textTertiary mt-1">
+                    <p className="text-xs text-webai-elements-textTertiary mt-1">
                       {searchQuery
                         ? "Try another search"
                         : "Changes will appear here as you edit"}
@@ -261,7 +261,7 @@ const FileModifiedDropdown = memo(
                     );
                     toast.success("File list copied to clipboard");
                   }}
-                  className="w-full flex items-center justify-center gap-2 px-3 py-1.5 text-sm rounded-lg bg-bolt-elements-background-depth-1 hover:bg-bolt-elements-background-depth-3 transition-colors text-bolt-elements-textTertiary hover:text-color-primary"
+                  className="w-full flex items-center justify-center gap-2 px-3 py-1.5 text-sm rounded-lg bg-webai-elements-background-depth-1 hover:bg-webai-elements-background-depth-3 transition-colors text-webai-elements-textTertiary hover:text-color-primary"
                 >
                   Copy File List
                 </button>
@@ -360,7 +360,7 @@ export const Workbench = memo(
         >
           <div
             className={classNames(
-              'fixed top-0 bottom-0 right-0 w-[var(--workbench-inner-width)] z-[4] transition-[left,width] duration-200 bolt-ease-cubic-bezier',
+              'fixed top-0 bottom-0 right-0 w-[var(--workbench-inner-width)] z-[4] transition-[left,width] duration-200 webai-ease-cubic-bezier',
               {
                 'w-full': isSmallViewport,
                 'left-0': showWorkbench && isSmallViewport,

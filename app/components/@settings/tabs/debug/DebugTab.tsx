@@ -180,16 +180,16 @@ const DependencySection = ({
         )}
       >
         <div className="flex items-center gap-3">
-          <div className="i-ph:package text-bolt-elements-textSecondary w-4 h-4" />
+          <div className="i-ph:package text-webai-elements-textSecondary w-4 h-4" />
           <span className="text-base text-color-primary">
             {title} Dependencies ({deps.length})
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-sm text-bolt-elements-textSecondary">{isOpen ? 'Hide' : 'Show'}</span>
+          <span className="text-sm text-webai-elements-textSecondary">{isOpen ? 'Hide' : 'Show'}</span>
           <div
             className={classNames(
-              'i-ph:caret-down w-4 h-4 transform transition-transform duration-200 text-bolt-elements-textSecondary',
+              'i-ph:caret-down w-4 h-4 transform transition-transform duration-200 text-webai-elements-textSecondary',
               isOpen ? 'rotate-180' : '',
             )}
           />
@@ -208,7 +208,7 @@ const DependencySection = ({
             {deps.map((dep) => (
               <div key={dep.name} className="flex items-center justify-between text-sm">
                 <span className="text-color-primary">{dep.name}</span>
-                <span className="text-bolt-elements-textSecondary">{dep.version}</span>
+                <span className="text-webai-elements-textSecondary">{dep.version}</span>
               </div>
             ))}
           </div>
@@ -721,7 +721,7 @@ export default function DebugTab() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `bolt-debug-info-${new Date().toISOString()}.json`;
+      a.download = `webai-debug-info-${new Date().toISOString()}.json`;
       document.body.appendChild(a);
       a.click();
       window.URL.revokeObjectURL(url);
@@ -764,7 +764,7 @@ export default function DebugTab() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `bolt-debug-info-${new Date().toISOString()}.csv`;
+      a.download = `webai-debug-info-${new Date().toISOString()}.csv`;
       document.body.appendChild(a);
       a.click();
       window.URL.revokeObjectURL(url);
@@ -1095,7 +1095,7 @@ export default function DebugTab() {
       addFooters();
 
       // Save the PDF
-      doc.save(`bolt-debug-info-${new Date().toISOString()}.pdf`);
+      doc.save(`webai-debug-info-${new Date().toISOString()}.pdf`);
       toast.success('Debug information exported as PDF');
     } catch (error) {
       console.error('Failed to export PDF:', error);
@@ -1126,7 +1126,7 @@ export default function DebugTab() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `bolt-debug-info-${new Date().toISOString()}.txt`;
+      a.download = `webai-debug-info-${new Date().toISOString()}.txt`;
       document.body.appendChild(a);
       a.click();
       window.URL.revokeObjectURL(url);
@@ -1272,7 +1272,7 @@ export default function DebugTab() {
                   <div className={classNames(format.icon, 'w-5 h-5')} />
                   <div>
                     <div className="font-medium">{format.label}</div>
-                    <div className="text-xs text-bolt-elements-textSecondary mt-0.5">
+                    <div className="text-xs text-webai-elements-textSecondary mt-0.5">
                       {format.id === 'json' && 'Export as a structured JSON file'}
                       {format.id === 'csv' && 'Export as a CSV spreadsheet'}
                       {format.id === 'pdf' && 'Export as a formatted PDF document'}
@@ -1339,7 +1339,7 @@ export default function DebugTab() {
         <div className="p-4 rounded-xl bg-white dark:bg-[#0A0A0A] border border-[#E5E5E5] dark:border-[#1A1A1A] hover:border-purple-500/30 transition-all duration-200 h-[180px] flex flex-col">
           <div className="flex items-center gap-2">
             <div className="i-ph:warning-octagon text-purple-500 w-4 h-4" />
-            <div className="text-sm text-bolt-elements-textSecondary">Errors</div>
+            <div className="text-sm text-webai-elements-textSecondary">Errors</div>
           </div>
           <div className="flex items-center gap-2 mt-2">
             <span
@@ -1348,7 +1348,7 @@ export default function DebugTab() {
               {errorLogs.length}
             </span>
           </div>
-          <div className="text-xs text-bolt-elements-textSecondary mt-2 flex items-center gap-1.5">
+          <div className="text-xs text-webai-elements-textSecondary mt-2 flex items-center gap-1.5">
             <div
               className={classNames(
                 'w-3.5 h-3.5',
@@ -1363,7 +1363,7 @@ export default function DebugTab() {
         <div className="p-4 rounded-xl bg-white dark:bg-[#0A0A0A] border border-[#E5E5E5] dark:border-[#1A1A1A] hover:border-purple-500/30 transition-all duration-200 h-[180px] flex flex-col">
           <div className="flex items-center gap-2">
             <div className="i-ph:cpu text-purple-500 w-4 h-4" />
-            <div className="text-sm text-bolt-elements-textSecondary">Memory Usage</div>
+            <div className="text-sm text-webai-elements-textSecondary">Memory Usage</div>
           </div>
           <div className="flex items-center gap-2 mt-2">
             <span
@@ -1390,7 +1390,7 @@ export default function DebugTab() {
                   : '[&>div]:bg-green-500',
             )}
           />
-          <div className="text-xs text-bolt-elements-textSecondary mt-2 flex items-center gap-1.5">
+          <div className="text-xs text-webai-elements-textSecondary mt-2 flex items-center gap-1.5">
             <div className="i-ph:info w-3.5 h-3.5 text-purple-500" />
             Used: {systemInfo?.memory.used ?? '0 GB'} / {systemInfo?.memory.total ?? '0 GB'}
           </div>
@@ -1400,7 +1400,7 @@ export default function DebugTab() {
         <div className="p-4 rounded-xl bg-white dark:bg-[#0A0A0A] border border-[#E5E5E5] dark:border-[#1A1A1A] hover:border-purple-500/30 transition-all duration-200 h-[180px] flex flex-col">
           <div className="flex items-center gap-2">
             <div className="i-ph:timer text-purple-500 w-4 h-4" />
-            <div className="text-sm text-bolt-elements-textSecondary">Page Load Time</div>
+            <div className="text-sm text-webai-elements-textSecondary">Page Load Time</div>
           </div>
           <div className="flex items-center gap-2 mt-2">
             <span
@@ -1416,7 +1416,7 @@ export default function DebugTab() {
               {systemInfo ? (systemInfo.performance.timing.loadTime / 1000).toFixed(2) : '-'}s
             </span>
           </div>
-          <div className="text-xs text-bolt-elements-textSecondary mt-2 flex items-center gap-1.5">
+          <div className="text-xs text-webai-elements-textSecondary mt-2 flex items-center gap-1.5">
             <div className="i-ph:code w-3.5 h-3.5 text-purple-500" />
             DOM Ready: {systemInfo ? (systemInfo.performance.timing.domReadyTime / 1000).toFixed(2) : '-'}s
           </div>
@@ -1426,7 +1426,7 @@ export default function DebugTab() {
         <div className="p-4 rounded-xl bg-white dark:bg-[#0A0A0A] border border-[#E5E5E5] dark:border-[#1A1A1A] hover:border-purple-500/30 transition-all duration-200 h-[180px] flex flex-col">
           <div className="flex items-center gap-2">
             <div className="i-ph:wifi-high text-purple-500 w-4 h-4" />
-            <div className="text-sm text-bolt-elements-textSecondary">Network Speed</div>
+            <div className="text-sm text-webai-elements-textSecondary">Network Speed</div>
           </div>
           <div className="flex items-center gap-2 mt-2">
             <span
@@ -1442,7 +1442,7 @@ export default function DebugTab() {
               {systemInfo?.network.downlink ?? '-'} Mbps
             </span>
           </div>
-          <div className="text-xs text-bolt-elements-textSecondary mt-2 flex items-center gap-1.5">
+          <div className="text-xs text-webai-elements-textSecondary mt-2 flex items-center gap-1.5">
             <div className="i-ph:activity w-3.5 h-3.5 text-purple-500" />
             RTT: {systemInfo?.network.rtt ?? '-'} ms
           </div>
@@ -1455,11 +1455,11 @@ export default function DebugTab() {
               <div className="i-ph:robot text-purple-500 w-5 h-5" />
               <div>
                 <div className="text-base font-medium text-color-primary">Ollama Service</div>
-                <div className="text-xs text-bolt-elements-textSecondary mt-0.5">{status.message}</div>
+                <div className="text-xs text-webai-elements-textSecondary mt-0.5">{status.message}</div>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <div className="flex items-center gap-2 px-2.5 py-1 rounded-full bg-bolt-elements-background-depth-3">
+              <div className="flex items-center gap-2 px-2.5 py-1 rounded-full bg-webai-elements-background-depth-3">
                 <div
                   className={classNames('w-2 h-2 rounded-full animate-pulse', status.bgColor, {
                     'shadow-lg shadow-green-500/20': status.status === 'Running',
@@ -1480,7 +1480,7 @@ export default function DebugTab() {
           <div className="mt-6 flex-1 min-h-0 flex flex-col">
             {status.status === 'Running' && ollamaStatus.models && ollamaStatus.models.length > 0 ? (
               <>
-                <div className="text-xs font-medium text-bolt-elements-textSecondary flex items-center justify-between mb-3">
+                <div className="text-xs font-medium text-webai-elements-textSecondary flex items-center justify-between mb-3">
                   <div className="flex items-center gap-2">
                     <div className="i-ph:cube-duotone w-4 h-4 text-purple-500" />
                     <span>Installed Models</span>
@@ -1494,9 +1494,9 @@ export default function DebugTab() {
                     {ollamaStatus.models.map((model) => (
                       <div
                         key={model.name}
-                        className="text-sm bg-bolt-elements-background-depth-3 hover:bg-bolt-elements-background-depth-4 rounded-lg px-4 py-3 flex items-center justify-between transition-colors group"
+                        className="text-sm bg-webai-elements-background-depth-3 hover:bg-webai-elements-background-depth-4 rounded-lg px-4 py-3 flex items-center justify-between transition-colors group"
                       >
-                        <div className="flex items-center gap-2 text-bolt-elements-textSecondary">
+                        <div className="flex items-center gap-2 text-webai-elements-textSecondary">
                           <div className="i-ph:cube w-4 h-4 text-purple-500/70 group-hover:text-purple-500 transition-colors" />
                           <span className="font-mono truncate">{model.name}</span>
                         </div>
@@ -1518,7 +1518,7 @@ export default function DebugTab() {
                       'i-ph:cube-duotone text-purple-500/80': status.status === 'Running',
                     })}
                   />
-                  <span className="text-sm text-bolt-elements-textSecondary">{status.message}</span>
+                  <span className="text-sm text-webai-elements-textSecondary">{status.message}</span>
                 </div>
               </div>
             )}
@@ -1642,56 +1642,56 @@ export default function DebugTab() {
               <div className="grid grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <div className="text-sm flex items-center gap-2">
-                    <div className="i-ph:desktop text-bolt-elements-textSecondary w-4 h-4" />
-                    <span className="text-bolt-elements-textSecondary">OS: </span>
+                    <div className="i-ph:desktop text-webai-elements-textSecondary w-4 h-4" />
+                    <span className="text-webai-elements-textSecondary">OS: </span>
                     <span className="text-color-primary">{systemInfo.os}</span>
                   </div>
                   <div className="text-sm flex items-center gap-2">
-                    <div className="i-ph:device-mobile text-bolt-elements-textSecondary w-4 h-4" />
-                    <span className="text-bolt-elements-textSecondary">Platform: </span>
+                    <div className="i-ph:device-mobile text-webai-elements-textSecondary w-4 h-4" />
+                    <span className="text-webai-elements-textSecondary">Platform: </span>
                     <span className="text-color-primary">{systemInfo.platform}</span>
                   </div>
                   <div className="text-sm flex items-center gap-2">
-                    <div className="i-ph:microchip text-bolt-elements-textSecondary w-4 h-4" />
-                    <span className="text-bolt-elements-textSecondary">Architecture: </span>
+                    <div className="i-ph:microchip text-webai-elements-textSecondary w-4 h-4" />
+                    <span className="text-webai-elements-textSecondary">Architecture: </span>
                     <span className="text-color-primary">{systemInfo.arch}</span>
                   </div>
                   <div className="text-sm flex items-center gap-2">
-                    <div className="i-ph:cpu text-bolt-elements-textSecondary w-4 h-4" />
-                    <span className="text-bolt-elements-textSecondary">CPU Cores: </span>
+                    <div className="i-ph:cpu text-webai-elements-textSecondary w-4 h-4" />
+                    <span className="text-webai-elements-textSecondary">CPU Cores: </span>
                     <span className="text-color-primary">{systemInfo.cpus}</span>
                   </div>
                   <div className="text-sm flex items-center gap-2">
-                    <div className="i-ph:node text-bolt-elements-textSecondary w-4 h-4" />
-                    <span className="text-bolt-elements-textSecondary">Node Version: </span>
+                    <div className="i-ph:node text-webai-elements-textSecondary w-4 h-4" />
+                    <span className="text-webai-elements-textSecondary">Node Version: </span>
                     <span className="text-color-primary">{systemInfo.node}</span>
                   </div>
                   <div className="text-sm flex items-center gap-2">
-                    <div className="i-ph:wifi-high text-bolt-elements-textSecondary w-4 h-4" />
-                    <span className="text-bolt-elements-textSecondary">Network Type: </span>
+                    <div className="i-ph:wifi-high text-webai-elements-textSecondary w-4 h-4" />
+                    <span className="text-webai-elements-textSecondary">Network Type: </span>
                     <span className="text-color-primary">
                       {systemInfo.network.type} ({systemInfo.network.effectiveType})
                     </span>
                   </div>
                   <div className="text-sm flex items-center gap-2">
-                    <div className="i-ph:gauge text-bolt-elements-textSecondary w-4 h-4" />
-                    <span className="text-bolt-elements-textSecondary">Network Speed: </span>
+                    <div className="i-ph:gauge text-webai-elements-textSecondary w-4 h-4" />
+                    <span className="text-webai-elements-textSecondary">Network Speed: </span>
                     <span className="text-color-primary">
                       {systemInfo.network.downlink}Mbps (RTT: {systemInfo.network.rtt}ms)
                     </span>
                   </div>
                   {systemInfo.battery && (
                     <div className="text-sm flex items-center gap-2">
-                      <div className="i-ph:battery-charging text-bolt-elements-textSecondary w-4 h-4" />
-                      <span className="text-bolt-elements-textSecondary">Battery: </span>
+                      <div className="i-ph:battery-charging text-webai-elements-textSecondary w-4 h-4" />
+                      <span className="text-webai-elements-textSecondary">Battery: </span>
                       <span className="text-color-primary">
                         {systemInfo.battery.level.toFixed(1)}% {systemInfo.battery.charging ? '(Charging)' : ''}
                       </span>
                     </div>
                   )}
                   <div className="text-sm flex items-center gap-2">
-                    <div className="i-ph:hard-drive text-bolt-elements-textSecondary w-4 h-4" />
-                    <span className="text-bolt-elements-textSecondary">Storage: </span>
+                    <div className="i-ph:hard-drive text-webai-elements-textSecondary w-4 h-4" />
+                    <span className="text-webai-elements-textSecondary">Storage: </span>
                     <span className="text-color-primary">
                       {(systemInfo.storage.usage / (1024 * 1024 * 1024)).toFixed(2)}GB /{' '}
                       {(systemInfo.storage.quota / (1024 * 1024 * 1024)).toFixed(2)}GB
@@ -1700,39 +1700,39 @@ export default function DebugTab() {
                 </div>
                 <div className="space-y-2">
                   <div className="text-sm flex items-center gap-2">
-                    <div className="i-ph:database text-bolt-elements-textSecondary w-4 h-4" />
-                    <span className="text-bolt-elements-textSecondary">Memory Usage: </span>
+                    <div className="i-ph:database text-webai-elements-textSecondary w-4 h-4" />
+                    <span className="text-webai-elements-textSecondary">Memory Usage: </span>
                     <span className="text-color-primary">
                       {systemInfo.memory.used} / {systemInfo.memory.total} ({systemInfo.memory.percentage}%)
                     </span>
                   </div>
                   <div className="text-sm flex items-center gap-2">
-                    <div className="i-ph:browser text-bolt-elements-textSecondary w-4 h-4" />
-                    <span className="text-bolt-elements-textSecondary">Browser: </span>
+                    <div className="i-ph:browser text-webai-elements-textSecondary w-4 h-4" />
+                    <span className="text-webai-elements-textSecondary">Browser: </span>
                     <span className="text-color-primary">
                       {systemInfo.browser.name} {systemInfo.browser.version}
                     </span>
                   </div>
                   <div className="text-sm flex items-center gap-2">
-                    <div className="i-ph:monitor text-bolt-elements-textSecondary w-4 h-4" />
-                    <span className="text-bolt-elements-textSecondary">Screen: </span>
+                    <div className="i-ph:monitor text-webai-elements-textSecondary w-4 h-4" />
+                    <span className="text-webai-elements-textSecondary">Screen: </span>
                     <span className="text-color-primary">
                       {systemInfo.screen.width}x{systemInfo.screen.height} ({systemInfo.screen.pixelRatio}x)
                     </span>
                   </div>
                   <div className="text-sm flex items-center gap-2">
-                    <div className="i-ph:clock text-bolt-elements-textSecondary w-4 h-4" />
-                    <span className="text-bolt-elements-textSecondary">Timezone: </span>
+                    <div className="i-ph:clock text-webai-elements-textSecondary w-4 h-4" />
+                    <span className="text-webai-elements-textSecondary">Timezone: </span>
                     <span className="text-color-primary">{systemInfo.time.timezone}</span>
                   </div>
                   <div className="text-sm flex items-center gap-2">
-                    <div className="i-ph:translate text-bolt-elements-textSecondary w-4 h-4" />
-                    <span className="text-bolt-elements-textSecondary">Language: </span>
+                    <div className="i-ph:translate text-webai-elements-textSecondary w-4 h-4" />
+                    <span className="text-webai-elements-textSecondary">Language: </span>
                     <span className="text-color-primary">{systemInfo.browser.language}</span>
                   </div>
                   <div className="text-sm flex items-center gap-2">
-                    <div className="i-ph:chart-pie text-bolt-elements-textSecondary w-4 h-4" />
-                    <span className="text-bolt-elements-textSecondary">JS Heap: </span>
+                    <div className="i-ph:chart-pie text-webai-elements-textSecondary w-4 h-4" />
+                    <span className="text-webai-elements-textSecondary">JS Heap: </span>
                     <span className="text-color-primary">
                       {(systemInfo.performance.memory.usedJSHeapSize / (1024 * 1024)).toFixed(1)}MB /{' '}
                       {(systemInfo.performance.memory.totalJSHeapSize / (1024 * 1024)).toFixed(1)}MB (
@@ -1740,15 +1740,15 @@ export default function DebugTab() {
                     </span>
                   </div>
                   <div className="text-sm flex items-center gap-2">
-                    <div className="i-ph:timer text-bolt-elements-textSecondary w-4 h-4" />
-                    <span className="text-bolt-elements-textSecondary">Page Load: </span>
+                    <div className="i-ph:timer text-webai-elements-textSecondary w-4 h-4" />
+                    <span className="text-webai-elements-textSecondary">Page Load: </span>
                     <span className="text-color-primary">
                       {(systemInfo.performance.timing.loadTime / 1000).toFixed(2)}s
                     </span>
                   </div>
                   <div className="text-sm flex items-center gap-2">
-                    <div className="i-ph:code text-bolt-elements-textSecondary w-4 h-4" />
-                    <span className="text-bolt-elements-textSecondary">DOM Ready: </span>
+                    <div className="i-ph:code text-webai-elements-textSecondary w-4 h-4" />
+                    <span className="text-webai-elements-textSecondary">DOM Ready: </span>
                     <span className="text-color-primary">
                       {(systemInfo.performance.timing.domReadyTime / 1000).toFixed(2)}s
                     </span>
@@ -1756,7 +1756,7 @@ export default function DebugTab() {
                 </div>
               </div>
             ) : (
-              <div className="text-sm text-bolt-elements-textSecondary">Loading system information...</div>
+              <div className="text-sm text-webai-elements-textSecondary">Loading system information...</div>
             )}
           </div>
         </CollapsibleContent>
@@ -1789,25 +1789,25 @@ export default function DebugTab() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <div className="text-sm">
-                    <span className="text-bolt-elements-textSecondary">Page Load Time: </span>
+                    <span className="text-webai-elements-textSecondary">Page Load Time: </span>
                     <span className="text-color-primary">
                       {(systemInfo.performance.timing.loadTime / 1000).toFixed(2)}s
                     </span>
                   </div>
                   <div className="text-sm">
-                    <span className="text-bolt-elements-textSecondary">DOM Ready Time: </span>
+                    <span className="text-webai-elements-textSecondary">DOM Ready Time: </span>
                     <span className="text-color-primary">
                       {(systemInfo.performance.timing.domReadyTime / 1000).toFixed(2)}s
                     </span>
                   </div>
                   <div className="text-sm">
-                    <span className="text-bolt-elements-textSecondary">Request Time: </span>
+                    <span className="text-webai-elements-textSecondary">Request Time: </span>
                     <span className="text-color-primary">
                       {(systemInfo.performance.timing.requestTime / 1000).toFixed(2)}s
                     </span>
                   </div>
                   <div className="text-sm">
-                    <span className="text-bolt-elements-textSecondary">Redirect Time: </span>
+                    <span className="text-webai-elements-textSecondary">Redirect Time: </span>
                     <span className="text-color-primary">
                       {(systemInfo.performance.timing.redirectTime / 1000).toFixed(2)}s
                     </span>
@@ -1815,20 +1815,20 @@ export default function DebugTab() {
                 </div>
                 <div className="space-y-2">
                   <div className="text-sm">
-                    <span className="text-bolt-elements-textSecondary">JS Heap Usage: </span>
+                    <span className="text-webai-elements-textSecondary">JS Heap Usage: </span>
                     <span className="text-color-primary">
                       {(systemInfo.performance.memory.usedJSHeapSize / (1024 * 1024)).toFixed(1)}MB /{' '}
                       {(systemInfo.performance.memory.totalJSHeapSize / (1024 * 1024)).toFixed(1)}MB
                     </span>
                   </div>
                   <div className="text-sm">
-                    <span className="text-bolt-elements-textSecondary">Heap Utilization: </span>
+                    <span className="text-webai-elements-textSecondary">Heap Utilization: </span>
                     <span className="text-color-primary">
                       {systemInfo.performance.memory.usagePercentage.toFixed(1)}%
                     </span>
                   </div>
                   <div className="text-sm">
-                    <span className="text-bolt-elements-textSecondary">Navigation Type: </span>
+                    <span className="text-webai-elements-textSecondary">Navigation Type: </span>
                     <span className="text-color-primary">
                       {systemInfo.performance.navigation.type === 0
                         ? 'Navigate'
@@ -1840,7 +1840,7 @@ export default function DebugTab() {
                     </span>
                   </div>
                   <div className="text-sm">
-                    <span className="text-bolt-elements-textSecondary">Redirects: </span>
+                    <span className="text-webai-elements-textSecondary">Redirects: </span>
                     <span className="text-color-primary">
                       {systemInfo.performance.navigation.redirectCount}
                     </span>
@@ -1881,7 +1881,7 @@ export default function DebugTab() {
                 <span className="loading loading-spinner loading-lg" />
               </div>
             ) : !webAppInfo ? (
-              <div className="flex flex-col items-center justify-center p-8 text-bolt-elements-textSecondary">
+              <div className="flex flex-col items-center justify-center p-8 text-webai-elements-textSecondary">
                 <div className="i-ph:warning-circle w-8 h-8 mb-2" />
                 <p>Failed to load WebApp information</p>
                 <button
@@ -1897,28 +1897,28 @@ export default function DebugTab() {
                   <h3 className="mb-4 text-base font-medium text-color-primary">Basic Information</h3>
                   <div className="space-y-3">
                     <div className="text-sm flex items-center gap-2">
-                      <div className="i-ph:app-window text-bolt-elements-textSecondary w-4 h-4" />
-                      <span className="text-bolt-elements-textSecondary">Name:</span>
+                      <div className="i-ph:app-window text-webai-elements-textSecondary w-4 h-4" />
+                      <span className="text-webai-elements-textSecondary">Name:</span>
                       <span className="text-color-primary">{webAppInfo.name}</span>
                     </div>
                     <div className="text-sm flex items-center gap-2">
-                      <div className="i-ph:tag text-bolt-elements-textSecondary w-4 h-4" />
-                      <span className="text-bolt-elements-textSecondary">Version:</span>
+                      <div className="i-ph:tag text-webai-elements-textSecondary w-4 h-4" />
+                      <span className="text-webai-elements-textSecondary">Version:</span>
                       <span className="text-color-primary">{webAppInfo.version}</span>
                     </div>
                     <div className="text-sm flex items-center gap-2">
-                      <div className="i-ph:certificate text-bolt-elements-textSecondary w-4 h-4" />
-                      <span className="text-bolt-elements-textSecondary">License:</span>
+                      <div className="i-ph:certificate text-webai-elements-textSecondary w-4 h-4" />
+                      <span className="text-webai-elements-textSecondary">License:</span>
                       <span className="text-color-primary">{webAppInfo.license}</span>
                     </div>
                     <div className="text-sm flex items-center gap-2">
-                      <div className="i-ph:cloud text-bolt-elements-textSecondary w-4 h-4" />
-                      <span className="text-bolt-elements-textSecondary">Environment:</span>
+                      <div className="i-ph:cloud text-webai-elements-textSecondary w-4 h-4" />
+                      <span className="text-webai-elements-textSecondary">Environment:</span>
                       <span className="text-color-primary">{webAppInfo.environment}</span>
                     </div>
                     <div className="text-sm flex items-center gap-2">
-                      <div className="i-ph:node text-bolt-elements-textSecondary w-4 h-4" />
-                      <span className="text-bolt-elements-textSecondary">Node Version:</span>
+                      <div className="i-ph:node text-webai-elements-textSecondary w-4 h-4" />
+                      <span className="text-webai-elements-textSecondary">Node Version:</span>
                       <span className="text-color-primary">{webAppInfo.runtimeInfo.nodeVersion}</span>
                     </div>
                   </div>
@@ -1928,23 +1928,23 @@ export default function DebugTab() {
                   <h3 className="mb-4 text-base font-medium text-color-primary">Git Information</h3>
                   <div className="space-y-3">
                     <div className="text-sm flex items-center gap-2">
-                      <div className="i-ph:git-branch text-bolt-elements-textSecondary w-4 h-4" />
-                      <span className="text-bolt-elements-textSecondary">Branch:</span>
+                      <div className="i-ph:git-branch text-webai-elements-textSecondary w-4 h-4" />
+                      <span className="text-webai-elements-textSecondary">Branch:</span>
                       <span className="text-color-primary">{webAppInfo.gitInfo.local.branch}</span>
                     </div>
                     <div className="text-sm flex items-center gap-2">
-                      <div className="i-ph:git-commit text-bolt-elements-textSecondary w-4 h-4" />
-                      <span className="text-bolt-elements-textSecondary">Commit:</span>
+                      <div className="i-ph:git-commit text-webai-elements-textSecondary w-4 h-4" />
+                      <span className="text-webai-elements-textSecondary">Commit:</span>
                       <span className="text-color-primary">{webAppInfo.gitInfo.local.commitHash}</span>
                     </div>
                     <div className="text-sm flex items-center gap-2">
-                      <div className="i-ph:user text-bolt-elements-textSecondary w-4 h-4" />
-                      <span className="text-bolt-elements-textSecondary">Author:</span>
+                      <div className="i-ph:user text-webai-elements-textSecondary w-4 h-4" />
+                      <span className="text-webai-elements-textSecondary">Author:</span>
                       <span className="text-color-primary">{webAppInfo.gitInfo.local.author}</span>
                     </div>
                     <div className="text-sm flex items-center gap-2">
-                      <div className="i-ph:clock text-bolt-elements-textSecondary w-4 h-4" />
-                      <span className="text-bolt-elements-textSecondary">Commit Time:</span>
+                      <div className="i-ph:clock text-webai-elements-textSecondary w-4 h-4" />
+                      <span className="text-webai-elements-textSecondary">Commit Time:</span>
                       <span className="text-color-primary">{webAppInfo.gitInfo.local.commitTime}</span>
                     </div>
 
@@ -1952,8 +1952,8 @@ export default function DebugTab() {
                       <>
                         <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-800">
                           <div className="text-sm flex items-center gap-2">
-                            <div className="i-ph:git-repository text-bolt-elements-textSecondary w-4 h-4" />
-                            <span className="text-bolt-elements-textSecondary">Repository:</span>
+                            <div className="i-ph:git-repository text-webai-elements-textSecondary w-4 h-4" />
+                            <span className="text-webai-elements-textSecondary">Repository:</span>
                             <span className="text-color-primary">
                               {webAppInfo.gitInfo.github.currentRepo.fullName}
                               {webAppInfo.gitInfo.isForked && ' (fork)'}
@@ -1963,19 +1963,19 @@ export default function DebugTab() {
                           <div className="mt-2 flex items-center gap-4 text-sm">
                             <div className="flex items-center gap-1">
                               <div className="i-ph:star text-yellow-500 w-4 h-4" />
-                              <span className="text-bolt-elements-textSecondary">
+                              <span className="text-webai-elements-textSecondary">
                                 {webAppInfo.gitInfo.github.currentRepo.stars}
                               </span>
                             </div>
                             <div className="flex items-center gap-1">
                               <div className="i-ph:git-fork text-blue-500 w-4 h-4" />
-                              <span className="text-bolt-elements-textSecondary">
+                              <span className="text-webai-elements-textSecondary">
                                 {webAppInfo.gitInfo.github.currentRepo.forks}
                               </span>
                             </div>
                             <div className="flex items-center gap-1">
                               <div className="i-ph:warning-circle text-red-500 w-4 h-4" />
-                              <span className="text-bolt-elements-textSecondary">
+                              <span className="text-webai-elements-textSecondary">
                                 {webAppInfo.gitInfo.github.currentRepo.openIssues}
                               </span>
                             </div>
@@ -1985,8 +1985,8 @@ export default function DebugTab() {
                         {webAppInfo.gitInfo.github.upstream && (
                           <div className="mt-2">
                             <div className="text-sm flex items-center gap-2">
-                              <div className="i-ph:git-fork text-bolt-elements-textSecondary w-4 h-4" />
-                              <span className="text-bolt-elements-textSecondary">Upstream:</span>
+                              <div className="i-ph:git-fork text-webai-elements-textSecondary w-4 h-4" />
+                              <span className="text-webai-elements-textSecondary">Upstream:</span>
                               <span className="text-color-primary">
                                 {webAppInfo.gitInfo.github.upstream.fullName}
                               </span>
@@ -1995,13 +1995,13 @@ export default function DebugTab() {
                             <div className="mt-2 flex items-center gap-4 text-sm">
                               <div className="flex items-center gap-1">
                                 <div className="i-ph:star text-yellow-500 w-4 h-4" />
-                                <span className="text-bolt-elements-textSecondary">
+                                <span className="text-webai-elements-textSecondary">
                                   {webAppInfo.gitInfo.github.upstream.stars}
                                 </span>
                               </div>
                               <div className="flex items-center gap-1">
                                 <div className="i-ph:git-fork text-blue-500 w-4 h-4" />
-                                <span className="text-bolt-elements-textSecondary">
+                                <span className="text-webai-elements-textSecondary">
                                   {webAppInfo.gitInfo.github.upstream.forks}
                                 </span>
                               </div>
@@ -2060,7 +2060,7 @@ export default function DebugTab() {
           <div className="p-6 mt-2 rounded-xl bg-white dark:bg-[#0A0A0A] border border-[#E5E5E5] dark:border-[#1A1A1A]">
             <ScrollArea className="h-[300px]">
               <div className="space-y-4">
-                <div className="text-sm text-bolt-elements-textSecondary">
+                <div className="text-sm text-webai-elements-textSecondary">
                   Checks for:
                   <ul className="list-disc list-inside mt-2 space-y-1">
                     <li>Unhandled JavaScript errors</li>
@@ -2070,7 +2070,7 @@ export default function DebugTab() {
                   </ul>
                 </div>
                 <div className="text-sm">
-                  <span className="text-bolt-elements-textSecondary">Status: </span>
+                  <span className="text-webai-elements-textSecondary">Status: </span>
                   <span className="text-color-primary">
                     {loading.errors
                       ? 'Checking...'

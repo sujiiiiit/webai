@@ -303,7 +303,7 @@ export default function LocalProvidersTab() {
 
   // Update model details display
   const ModelDetails = ({ model }: { model: OllamaModel }) => (
-    <div className="flex items-center gap-3 text-xs text-bolt-elements-textSecondary">
+    <div className="flex items-center gap-3 text-xs text-webai-elements-textSecondary">
       <div className="flex items-center gap-1">
         <div className="i-ph:code text-purple-500" />
         <span>{model.digest.substring(0, 7)}</span>
@@ -379,8 +379,8 @@ export default function LocalProvidersTab() {
   return (
     <div
       className={classNames(
-        'rounded-lg bg-bolt-elements-background text-color-primary shadow-sm p-4',
-        'hover:bg-bolt-elements-background-depth-2',
+        'rounded-lg bg-webai-elements-background text-color-primary shadow-sm p-4',
+        'hover:bg-webai-elements-background-depth-2',
         'transition-all duration-200',
       )}
       role="region"
@@ -408,12 +408,12 @@ export default function LocalProvidersTab() {
               <div className="flex items-center gap-2">
                 <h2 className="text-lg font-semibold text-color-primary">Local AI Models</h2>
               </div>
-              <p className="text-sm text-bolt-elements-textSecondary">Configure and manage your local AI providers</p>
+              <p className="text-sm text-webai-elements-textSecondary">Configure and manage your local AI providers</p>
             </div>
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="text-sm text-bolt-elements-textSecondary">Enable All</span>
+            <span className="text-sm text-webai-elements-textSecondary">Enable All</span>
             <Switch
               checked={categoryEnabled}
               onCheckedChange={handleToggleCategory}
@@ -429,8 +429,8 @@ export default function LocalProvidersTab() {
             <motion.div
               key={provider.name}
               className={classNames(
-                'bg-bolt-elements-background-depth-2 rounded-xl',
-                'hover:bg-bolt-elements-background-depth-3',
+                'bg-webai-elements-background-depth-2 rounded-xl',
+                'hover:bg-webai-elements-background-depth-3',
                 'transition-all duration-200 p-5',
                 'relative overflow-hidden group',
               )}
@@ -444,8 +444,8 @@ export default function LocalProvidersTab() {
                   <motion.div
                     className={classNames(
                       'w-12 h-12 flex items-center justify-center rounded-xl',
-                      'bg-bolt-elements-background-depth-3',
-                      provider.settings.enabled ? 'text-purple-500' : 'text-bolt-elements-textSecondary',
+                      'bg-webai-elements-background-depth-3',
+                      provider.settings.enabled ? 'text-purple-500' : 'text-webai-elements-textSecondary',
                     )}
                     whileHover={{ scale: 1.1, rotate: 5 }}
                   >
@@ -459,7 +459,7 @@ export default function LocalProvidersTab() {
                       <h3 className="text-md font-semibold text-color-primary">{provider.name}</h3>
                       <span className="px-2 py-0.5 text-xs rounded-full bg-green-500/10 text-green-500">Local</span>
                     </div>
-                    <p className="text-sm text-bolt-elements-textSecondary mt-1">
+                    <p className="text-sm text-webai-elements-textSecondary mt-1">
                       {PROVIDER_DESCRIPTIONS[provider.name as ProviderName]}
                     </p>
                   </div>
@@ -481,7 +481,7 @@ export default function LocalProvidersTab() {
                     className="mt-4"
                   >
                     <div className="flex flex-col gap-2">
-                      <label className="text-sm text-bolt-elements-textSecondary">API Endpoint</label>
+                      <label className="text-sm text-webai-elements-textSecondary">API Endpoint</label>
                       {editingProvider === provider.name ? (
                         <input
                           type="text"
@@ -489,8 +489,8 @@ export default function LocalProvidersTab() {
                           placeholder="Enter Ollama base URL"
                           className={classNames(
                             'w-full px-3 py-2 rounded-lg text-sm',
-                            'bg-bolt-elements-background-depth-3 border border-light',
-                            'text-color-primary placeholder-bolt-elements-textTertiary',
+                            'bg-webai-elements-background-depth-3 border border-light',
+                            'text-color-primary placeholder-webai-elements-textTertiary',
                             'focus:outline-none focus:ring-2 focus:ring-purple-500/30',
                             'transition-all duration-200',
                           )}
@@ -509,12 +509,12 @@ export default function LocalProvidersTab() {
                           onClick={() => setEditingProvider(provider.name)}
                           className={classNames(
                             'w-full px-3 py-2 rounded-lg text-sm cursor-pointer',
-                            'bg-bolt-elements-background-depth-3 border border-light',
-                            'hover:border-purple-500/30 hover:bg-bolt-elements-background-depth-4',
+                            'bg-webai-elements-background-depth-3 border border-light',
+                            'hover:border-purple-500/30 hover:bg-webai-elements-background-depth-4',
                             'transition-all duration-200',
                           )}
                         >
-                          <div className="flex items-center gap-2 text-bolt-elements-textSecondary">
+                          <div className="flex items-center gap-2 text-webai-elements-textSecondary">
                             <div className="i-ph:link text-sm" />
                             <span>{provider.settings.baseUrl || OLLAMA_API_URL}</span>
                           </div>
@@ -536,10 +536,10 @@ export default function LocalProvidersTab() {
                     {isLoadingModels ? (
                       <div className="flex items-center gap-2">
                         <div className="i-ph:spinner-gap-bold animate-spin w-4 h-4" />
-                        <span className="text-sm text-bolt-elements-textSecondary">Loading models...</span>
+                        <span className="text-sm text-webai-elements-textSecondary">Loading models...</span>
                       </div>
                     ) : (
-                      <span className="text-sm text-bolt-elements-textSecondary">
+                      <span className="text-sm text-webai-elements-textSecondary">
                         {ollamaModels.length} models available
                       </span>
                     )}
@@ -551,12 +551,12 @@ export default function LocalProvidersTab() {
                         {Array.from({ length: 3 }).map((_, i) => (
                           <div
                             key={i}
-                            className="h-20 w-full bg-bolt-elements-background-depth-3 rounded-lg animate-pulse"
+                            className="h-20 w-full bg-webai-elements-background-depth-3 rounded-lg animate-pulse"
                           />
                         ))}
                       </div>
                     ) : ollamaModels.length === 0 ? (
-                      <div className="text-center py-8 text-bolt-elements-textSecondary">
+                      <div className="text-center py-8 text-webai-elements-textSecondary">
                         <div className="i-ph:cube-transparent text-4xl mx-auto mb-2" />
                         <p>No models installed yet</p>
                         <p className="text-sm text-color-secondary px-1">
@@ -579,8 +579,8 @@ export default function LocalProvidersTab() {
                           key={model.name}
                           className={classNames(
                             'p-4 rounded-xl',
-                            'bg-bolt-elements-background-depth-3',
-                            'hover:bg-bolt-elements-background-depth-4',
+                            'bg-webai-elements-background-depth-3',
+                            'hover:bg-webai-elements-background-depth-4',
                             'transition-all duration-200',
                           )}
                           whileHover={{ scale: 1.01 }}
@@ -609,7 +609,7 @@ export default function LocalProvidersTab() {
                                 value={Math.round((model.progress.current / model.progress.total) * 100)}
                                 className="h-1"
                               />
-                              <div className="flex justify-between mt-1 text-xs text-bolt-elements-textSecondary">
+                              <div className="flex justify-between mt-1 text-xs text-webai-elements-textSecondary">
                                 <span>{model.progress.status}</span>
                                 <span>{Math.round((model.progress.current / model.progress.total) * 100)}%</span>
                               </div>
@@ -637,8 +637,8 @@ export default function LocalProvidersTab() {
                 <motion.div
                   key={provider.name}
                   className={classNames(
-                    'bg-bolt-elements-background-depth-2 rounded-xl',
-                    'hover:bg-bolt-elements-background-depth-3',
+                    'bg-webai-elements-background-depth-2 rounded-xl',
+                    'hover:bg-webai-elements-background-depth-3',
                     'transition-all duration-200 p-5',
                     'relative overflow-hidden group',
                   )}
@@ -653,8 +653,8 @@ export default function LocalProvidersTab() {
                       <motion.div
                         className={classNames(
                           'w-12 h-12 flex items-center justify-center rounded-xl',
-                          'bg-bolt-elements-background-depth-3',
-                          provider.settings.enabled ? 'text-purple-500' : 'text-bolt-elements-textSecondary',
+                          'bg-webai-elements-background-depth-3',
+                          provider.settings.enabled ? 'text-purple-500' : 'text-webai-elements-textSecondary',
                         )}
                         whileHover={{ scale: 1.1, rotate: 5 }}
                       >
@@ -677,7 +677,7 @@ export default function LocalProvidersTab() {
                             )}
                           </div>
                         </div>
-                        <p className="text-sm text-bolt-elements-textSecondary mt-1">
+                        <p className="text-sm text-webai-elements-textSecondary mt-1">
                           {PROVIDER_DESCRIPTIONS[provider.name as ProviderName]}
                         </p>
                       </div>
@@ -699,7 +699,7 @@ export default function LocalProvidersTab() {
                         className="mt-4"
                       >
                         <div className="flex flex-col gap-2">
-                          <label className="text-sm text-bolt-elements-textSecondary">API Endpoint</label>
+                          <label className="text-sm text-webai-elements-textSecondary">API Endpoint</label>
                           {editingProvider === provider.name ? (
                             <input
                               type="text"
@@ -707,8 +707,8 @@ export default function LocalProvidersTab() {
                               placeholder={`Enter ${provider.name} base URL`}
                               className={classNames(
                                 'w-full px-3 py-2 rounded-lg text-sm',
-                                'bg-bolt-elements-background-depth-3 border border-light',
-                                'text-color-primary placeholder-bolt-elements-textTertiary',
+                                'bg-webai-elements-background-depth-3 border border-light',
+                                'text-color-primary placeholder-webai-elements-textTertiary',
                                 'focus:outline-none focus:ring-2 focus:ring-purple-500/30',
                                 'transition-all duration-200',
                               )}
@@ -727,12 +727,12 @@ export default function LocalProvidersTab() {
                               onClick={() => setEditingProvider(provider.name)}
                               className={classNames(
                                 'w-full px-3 py-2 rounded-lg text-sm cursor-pointer',
-                                'bg-bolt-elements-background-depth-3 border border-light',
-                                'hover:border-purple-500/30 hover:bg-bolt-elements-background-depth-4',
+                                'bg-webai-elements-background-depth-3 border border-light',
+                                'hover:border-purple-500/30 hover:bg-webai-elements-background-depth-4',
                                 'transition-all duration-200',
                               )}
                             >
-                              <div className="flex items-center gap-2 text-bolt-elements-textSecondary">
+                              <div className="flex items-center gap-2 text-webai-elements-textSecondary">
                                 <div className="i-ph:link text-sm" />
                                 <span>{provider.settings.baseUrl || 'Click to set base URL'}</span>
                               </div>

@@ -99,19 +99,19 @@ export function DataVisualization({ chats }: DataVisualizationProps) {
   // Theme-aware chart colors with enhanced dark mode visibility using CSS variables
   const chartColors = {
     grid: isDarkMode ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.1)',
-    text: getThemeColor('--bolt-elements-textPrimary'),
-    textSecondary: getThemeColor('--bolt-elements-textSecondary'),
-    background: getThemeColor('--bolt-elements-bg-depth-1'),
-    accent: getThemeColor('--bolt-elements-button-primary-text'),
-    border: getThemeColor('--bolt-elements-borderColor'),
+    text: getThemeColor('--webai-elements-textPrimary'),
+    textSecondary: getThemeColor('--webai-elements-textSecondary'),
+    background: getThemeColor('--webai-elements-bg-depth-1'),
+    accent: getThemeColor('--webai-elements-button-primary-text'),
+    border: getThemeColor('--webai-elements-borderColor'),
   };
 
   const getChartColors = (index: number) => {
-    // Define color palettes based on Bolt design tokens
+    // Define color palettes based on Webai design tokens
     const baseColors = [
       // Indigo
       {
-        base: getThemeColor('--bolt-elements-button-primary-text'),
+        base: getThemeColor('--webai-elements-button-primary-text'),
       },
 
       // Pink
@@ -121,7 +121,7 @@ export function DataVisualization({ chats }: DataVisualizationProps) {
 
       // Green
       {
-        base: getThemeColor('--bolt-elements-icon-success'),
+        base: getThemeColor('--webai-elements-icon-success'),
       },
 
       // Yellow
@@ -312,7 +312,7 @@ export function DataVisualization({ chats }: DataVisualizationProps) {
       <div className="text-center py-8">
         <div className="i-ph-chart-line-duotone w-12 h-12 mx-auto mb-4 text-color-secondary opacity-80" />
         <h3 className="text-lg font-medium text-color-primary mb-2">No Data Available</h3>
-        <p className="text-bolt-elements-textSecondary">
+        <p className="text-webai-elements-textSecondary">
           Start creating chats to see your usage statistics and data visualization.
         </p>
       </div>
@@ -321,7 +321,7 @@ export function DataVisualization({ chats }: DataVisualizationProps) {
 
   const cardClasses = classNames(
     'p-6 rounded-lg shadow-sm',
-    'bg-bolt-elements-bg-depth-1',
+    'bg-webai-elements-bg-depth-1',
     'border border-light',
   );
 

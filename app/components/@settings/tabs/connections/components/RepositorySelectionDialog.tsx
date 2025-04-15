@@ -820,8 +820,8 @@ export function RepositorySelectionDialog({ isOpen, onClose, onSelect }: Reposit
                   'p-2 rounded-lg transition-all duration-200 ease-in-out',
                   'text-color-secondary hover:text-color-primary',
                   'dark:text-color-secondary-dark dark:hover:text-color-primary-dark',
-                  'hover:bg-bolt-elements-background-depth-2 dark:hover:bg-bolt-elements-background-depth-3',
-                  'focus:outline-none focus:ring-2 focus:ring-bolt-elements-borderColor dark:focus:ring-bolt-elements-borderColor-dark',
+                  'hover:bg-webai-elements-background-depth-2 dark:hover:bg-webai-elements-background-depth-3',
+                  'focus:outline-none focus:ring-2 focus:ring-webai-elements-borderColor dark:focus:ring-webai-elements-borderColor-dark',
                 )}
               >
                 <span className="i-ph:x block w-5 h-5" aria-hidden="true" />
@@ -832,7 +832,7 @@ export function RepositorySelectionDialog({ isOpen, onClose, onSelect }: Reposit
             <div className="p-4 border-b border-[#E5E5E5] dark:border-[#333333] flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <span className="i-ph:info text-blue-500" />
-                <span className="text-sm text-bolt-elements-textSecondary dark:text-bolt-elements-textSecondary-dark">
+                <span className="text-sm text-webai-elements-textSecondary dark:text-webai-elements-textSecondary-dark">
                   Need to access private repositories?
                 </span>
               </div>
@@ -901,7 +901,7 @@ export function RepositorySelectionDialog({ isOpen, onClose, onSelect }: Reposit
                         />
                         <button
                           onClick={() => setFilters({})}
-                          className="px-3 py-2 rounded-lg bg-[#F5F5F5] dark:bg-[#252525] text-bolt-elements-textSecondary hover:text-color-primary"
+                          className="px-3 py-2 rounded-lg bg-[#F5F5F5] dark:bg-[#252525] text-webai-elements-textSecondary hover:text-color-primary"
                         >
                           <span className="i-ph:funnel-simple" />
                         </button>
@@ -948,17 +948,17 @@ export function RepositorySelectionDialog({ isOpen, onClose, onSelect }: Reposit
                           <h3 className="font-medium">{selectedRepository.full_name}</h3>
                         </div>
                         <div className="space-y-2">
-                          <label className="text-sm text-bolt-elements-textSecondary">Select Branch</label>
+                          <label className="text-sm text-webai-elements-textSecondary">Select Branch</label>
                           <select
                             value={selectedBranch}
                             onChange={(e) => setSelectedBranch(e.target.value)}
-                            className="w-full px-3 py-2 rounded-lg bg-bolt-elements-background-depth-2 dark:bg-bolt-elements-background-depth-3 border border-light dark:border-light-dark text-color-primary dark:text-color-primary-dark focus:outline-none focus:ring-2 focus:ring-bolt-elements-borderColor dark:focus:ring-bolt-elements-borderColor-dark"
+                            className="w-full px-3 py-2 rounded-lg bg-webai-elements-background-depth-2 dark:bg-webai-elements-background-depth-3 border border-light dark:border-light-dark text-color-primary dark:text-color-primary-dark focus:outline-none focus:ring-2 focus:ring-webai-elements-borderColor dark:focus:ring-webai-elements-borderColor-dark"
                           >
                             {branches.map((branch) => (
                               <option
                                 key={branch.name}
                                 value={branch.name}
-                                className="bg-bolt-elements-background-depth-2 dark:bg-bolt-elements-background-depth-3 text-color-primary dark:text-color-primary-dark"
+                                className="bg-webai-elements-background-depth-2 dark:bg-webai-elements-background-depth-3 text-color-primary dark:text-color-primary-dark"
                               >
                                 {branch.name} {branch.default ? '(default)' : ''}
                               </option>
@@ -1034,7 +1034,7 @@ function RepositoryList({
 }) {
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center py-8 text-bolt-elements-textSecondary">
+      <div className="flex items-center justify-center py-8 text-webai-elements-textSecondary">
         <span className="i-ph:spinner animate-spin mr-2" />
         Loading repositories...
       </div>
@@ -1043,7 +1043,7 @@ function RepositoryList({
 
   if (repos.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center py-8 text-bolt-elements-textSecondary">
+      <div className="flex flex-col items-center justify-center py-8 text-webai-elements-textSecondary">
         <span className="i-ph:folder-simple-dashed w-12 h-12 mb-2 opacity-50" />
         <p>{activeTab === 'my-repos' ? 'No repositories found' : 'Search for repositories'}</p>
       </div>
@@ -1055,7 +1055,7 @@ function RepositoryList({
 
 function RepositoryCard({ repo, onSelect }: { repo: GitHubRepoInfo; onSelect: () => void }) {
   return (
-    <div className="p-4 rounded-lg bg-bolt-elements-background-depth-1 border border-light hover:border-lightActive/70 transition-colors">
+    <div className="p-4 rounded-lg bg-webai-elements-background-depth-1 border border-light hover:border-lightActive/70 transition-colors">
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-2">
           <span className="i-ph:git-repository text-color-secondary" />
@@ -1069,7 +1069,7 @@ function RepositoryCard({ repo, onSelect }: { repo: GitHubRepoInfo; onSelect: ()
           Import
         </button>
       </div>
-      {repo.description && <p className="text-sm text-bolt-elements-textSecondary mb-3">{repo.description}</p>}
+      {repo.description && <p className="text-sm text-webai-elements-textSecondary mb-3">{repo.description}</p>}
       <div className="flex items-center gap-4 text-sm text-color-secondary">
         {repo.language && (
           <span className="flex items-center gap-1">

@@ -75,8 +75,8 @@ export default function SettingsTab() {
 
         <div>
           <div className="flex items-center gap-2 mb-2">
-            <div className="i-ph:translate-fill w-4 h-4 text-bolt-elements-textSecondary" />
-            <label className="block text-sm text-bolt-elements-textSecondary">Language</label>
+            <div className="i-ph:translate-fill w-4 h-4 text-webai-elements-textSecondary" />
+            <label className="block text-sm text-webai-elements-textSecondary">Language</label>
           </div>
           <select
             value={settings.language}
@@ -105,11 +105,11 @@ export default function SettingsTab() {
 
         <div>
           <div className="flex items-center gap-2 mb-2">
-            <div className="i-ph:bell-fill w-4 h-4 text-bolt-elements-textSecondary" />
-            <label className="block text-sm text-bolt-elements-textSecondary">Notifications</label>
+            <div className="i-ph:bell-fill w-4 h-4 text-webai-elements-textSecondary" />
+            <label className="block text-sm text-webai-elements-textSecondary">Notifications</label>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-sm text-bolt-elements-textSecondary">
+            <span className="text-sm text-webai-elements-textSecondary">
               {settings.notifications ? 'Notifications are enabled' : 'Notifications are disabled'}
             </span>
             <Switch
@@ -155,8 +155,8 @@ export default function SettingsTab() {
 
         <div>
           <div className="flex items-center gap-2 mb-2">
-            <div className="i-ph:globe-fill w-4 h-4 text-bolt-elements-textSecondary" />
-            <label className="block text-sm text-bolt-elements-textSecondary">Timezone</label>
+            <div className="i-ph:globe-fill w-4 h-4 text-webai-elements-textSecondary" />
+            <label className="block text-sm text-webai-elements-textSecondary">Timezone</label>
           </div>
           <select
             value={settings.timezone}
@@ -191,19 +191,19 @@ export default function SettingsTab() {
           <div className="flex items-center justify-between p-2 rounded-lg bg-[#FAFAFA] dark:bg-[#1A1A1A]">
             <div className="flex flex-col">
               <span className="text-sm text-color-primary">Toggle Theme</span>
-              <span className="text-xs text-bolt-elements-textSecondary">Switch between light and dark mode</span>
+              <span className="text-xs text-webai-elements-textSecondary">Switch between light and dark mode</span>
             </div>
             <div className="flex items-center gap-1">
-              <kbd className="px-2 py-1 text-xs font-semibold text-bolt-elements-textSecondary bg-white dark:bg-[#0A0A0A] border border-[#E5E5E5] dark:border-[#1A1A1A] rounded shadow-sm">
+              <kbd className="px-2 py-1 text-xs font-semibold text-webai-elements-textSecondary bg-white dark:bg-[#0A0A0A] border border-[#E5E5E5] dark:border-[#1A1A1A] rounded shadow-sm">
                 {getModifierSymbol('meta')}
               </kbd>
-              <kbd className="px-2 py-1 text-xs font-semibold text-bolt-elements-textSecondary bg-white dark:bg-[#0A0A0A] border border-[#E5E5E5] dark:border-[#1A1A1A] rounded shadow-sm">
+              <kbd className="px-2 py-1 text-xs font-semibold text-webai-elements-textSecondary bg-white dark:bg-[#0A0A0A] border border-[#E5E5E5] dark:border-[#1A1A1A] rounded shadow-sm">
                 {getModifierSymbol('alt')}
               </kbd>
-              <kbd className="px-2 py-1 text-xs font-semibold text-bolt-elements-textSecondary bg-white dark:bg-[#0A0A0A] border border-[#E5E5E5] dark:border-[#1A1A1A] rounded shadow-sm">
+              <kbd className="px-2 py-1 text-xs font-semibold text-webai-elements-textSecondary bg-white dark:bg-[#0A0A0A] border border-[#E5E5E5] dark:border-[#1A1A1A] rounded shadow-sm">
                 {getModifierSymbol('shift')}
               </kbd>
-              <kbd className="px-2 py-1 text-xs font-semibold text-bolt-elements-textSecondary bg-white dark:bg-[#0A0A0A] border border-[#E5E5E5] dark:border-[#1A1A1A] rounded shadow-sm">
+              <kbd className="px-2 py-1 text-xs font-semibold text-webai-elements-textSecondary bg-white dark:bg-[#0A0A0A] border border-[#E5E5E5] dark:border-[#1A1A1A] rounded shadow-sm">
                 D
               </kbd>
             </div>

@@ -217,7 +217,7 @@ function ContextMenuItem({ onSelect, children }: { onSelect?: () => void; childr
   return (
     <ContextMenu.Item
       onSelect={onSelect}
-      className="flex items-center gap-2 px-2 py-1.5 outline-0 text-[13px] text-color-primary cursor-pointer ws-nowrap text-color-secondary hover:text-blue-400 hover:bg-bolt-elements-item-backgroundActive rounded-md"
+      className="flex items-center gap-2 px-2 py-1.5 outline-0 text-[13px] text-color-primary cursor-pointer ws-nowrap text-color-secondary hover:text-blue-400 hover:bg-webai-elements-item-backgroundActive rounded-md"
     >
       <span className="size-4 shrink-0"></span>
       <span>{children}</span>
@@ -257,7 +257,7 @@ function InlineInput({ depth, placeholder, initialValue = '', onSubmit, onCancel
 
   return (
     <div
-      className="flex items-center w-full px-2 bg-bolt-elements-background-depth-4 border border-bolt-elements-item-contentAccent py-0.5 text-color-primary"
+      className="flex items-center w-full px-2 bg-webai-elements-background-depth-4 border border-webai-elements-item-contentAccent py-0.5 text-color-primary"
       style={{ paddingLeft: `${6 + depth * NODE_PADDING_LEFT}px` }}
     >
       <div className="scale-120 shrink-0 i-ph:file-plus text-color-secondary" />
@@ -412,7 +412,7 @@ function FileContextMenu({
             onDragLeave={handleDragLeave}
             onDrop={handleDrop}
             className={classNames('relative', {
-              'bg-bolt-elements-background-depth-2 border border-dashed border-bolt-elements-item-contentAccent rounded-md':
+              'bg-webai-elements-background-depth-2 border border-dashed border-webai-elements-item-contentAccent rounded-md':
                 isDragging,
             })}
           >
@@ -422,7 +422,7 @@ function FileContextMenu({
         <ContextMenu.Portal>
           <ContextMenu.Content
             style={{ zIndex: 998 }}
-            className="border border-light rounded-md z-context-menu bg-bolt-elements-background-depth-1 dark:bg-bolt-elements-background-depth-2 data-[state=open]:animate-in animate-duration-100 data-[state=open]:fade-in-0 data-[state=open]:zoom-in-98 w-56"
+            className="border border-light rounded-md z-context-menu bg-webai-elements-background-depth-1 dark:bg-webai-elements-background-depth-2 data-[state=open]:animate-in animate-duration-100 data-[state=open]:fade-in-0 data-[state=open]:zoom-in-98 w-56"
           >
             <ContextMenu.Group className="p-1 border-b-px border-solid border-light">
               <ContextMenuItem onSelect={() => setIsCreatingFile(true)}>
@@ -479,7 +479,7 @@ function Folder({ folder, collapsed, selected = false, onCopyPath, onCopyRelativ
     <FileContextMenu onCopyPath={onCopyPath} onCopyRelativePath={onCopyRelativePath} fullPath={folder.fullPath}>
       <NodeButton
         className={classNames('group', {
-          'bg-transparent text-color-secondary hover:text-blue-400 hover:bg-bolt-elements-item-backgroundActive':
+          'bg-transparent text-color-secondary hover:text-blue-400 hover:bg-webai-elements-item-backgroundActive':
             !selected,
           'bg-blue-500/40 text-blue-500 dark:text-[#48AAFF]': selected,
         })}

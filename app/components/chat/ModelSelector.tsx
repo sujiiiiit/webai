@@ -156,7 +156,7 @@ export const ModelSelector = ({
 
   if (providerList.length === 0) {
     return (
-      <div className="mb-2 p-4 rounded-lg border border-light bg-bolt-elements-prompt-background text-color-primary">
+      <div className="mb-2 p-4 rounded-lg border border-light bg-webai-elements-prompt-background text-color-primary">
         <p className="text-center">
           No providers are currently enabled. Please enable at least one provider in the settings to start using the
           chat.
@@ -183,7 +183,7 @@ export const ModelSelector = ({
             setModel(firstModel.name);
           }
         }}
-        className="flex-1 p-2 rounded-lg border border-light bg-transparent text-color-primary focus:outline-none focus:ring-2 focus:ring-bolt-elements-focus transition-all"
+        className="flex-1 p-2 rounded-lg border border-light bg-transparent text-color-primary focus:outline-none focus:ring-2 focus:ring-webai-elements-focus transition-all"
       >
         {providerList.map((provider: ProviderInfo) => (
           <option key={provider.name} value={provider.name}>
@@ -197,9 +197,9 @@ export const ModelSelector = ({
           className={classNames(
             'w-full p-2 rounded-lg border border-light',
             'bg-transparent text-color-primary',
-            'focus-within:outline-none focus-within:ring-2 focus-within:ring-bolt-elements-focus',
+            'focus-within:outline-none focus-within:ring-2 focus-within:ring-webai-elements-focus',
             'transition-all cursor-pointer',
-            isModelDropdownOpen ? 'ring-2 ring-bolt-elements-focus' : undefined,
+            isModelDropdownOpen ? 'ring-2 ring-webai-elements-focus' : undefined,
           )}
           onClick={() => setIsModelDropdownOpen(!isModelDropdownOpen)}
           onKeyDown={(e) => {
@@ -218,7 +218,7 @@ export const ModelSelector = ({
             <div className="truncate max-w-[220px]">{modelList.find((m) => m.name === model)?.label || 'Select model'}</div>
             <div
               className={classNames(
-                'i-ph:caret-down w-4 h-4 text-bolt-elements-textSecondary opacity-75',
+                'i-ph:caret-down w-4 h-4 text-webai-elements-textSecondary opacity-75',
                 isModelDropdownOpen ? 'rotate-180' : undefined,
               )}
             />
@@ -284,13 +284,13 @@ export const ModelSelector = ({
                     aria-selected={model === modelOption.name}
                     className={classNames(
                       'px-3 py-2 text-sm cursor-pointer',
-                      'hover:bg-bolt-elements-background-depth-3',
+                      'hover:bg-webai-elements-background-depth-3',
                       'text-color-primary',
                       'outline-none',
                       model === modelOption.name || focusedIndex === index
                         ? 'bg-bg-messageContainer'
                         : undefined,
-                      focusedIndex === index ? 'ring-1 ring-inset ring-bolt-elements-focus' : undefined,
+                      focusedIndex === index ? 'ring-1 ring-inset ring-webai-elements-focus' : undefined,
                     )}
                     onClick={(e) => {
                       e.stopPropagation();

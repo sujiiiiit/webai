@@ -61,7 +61,7 @@ export const AssistantMessage = memo(({ content, annotations }: AssistantMessage
     <div className="overflow-hidden w-full">
       <Markdown html>{content}</Markdown>
       <>
-        <div className=" flex gap-2 items-center text-sm text-bolt-elements-textSecondary mb-2">
+        <div className=" flex gap-2 items-center text-sm text-webai-elements-textSecondary mb-2">
           {(codeContext || chatSummary) && (
             <Popover side="right" align="start" trigger={<div className="i-ph:info" />}>
               {chatSummary && (
@@ -75,13 +75,13 @@ export const AssistantMessage = memo(({ content, annotations }: AssistantMessage
                   {codeContext && (
                     <div className="code-context flex flex-col p4 border border-light rounded-md">
                       <h2>Context</h2>
-                      <div className="flex gap-4 mt-4 bolt" style={{ zoom: 0.6 }}>
+                      <div className="flex gap-4 mt-4 webai" style={{ zoom: 0.6 }}>
                         {codeContext.map((x) => {
                           const normalized = normalizedFilePath(x);
                           return (
                             <>
                               <code
-                                className="bg-bolt-elements-artifacts-inlineCode-background text-bolt-elements-artifacts-inlineCode-text px-1.5 py-1 rounded-md text-bolt-elements-item-contentAccent hover:underline cursor-pointer"
+                                className="bg-webai-elements-artifacts-inlineCode-background text-webai-elements-artifacts-inlineCode-text px-1.5 py-1 rounded-md text-webai-elements-item-contentAccent hover:underline cursor-pointer"
                                 onClick={(e) => {
                                   e.preventDefault();
                                   e.stopPropagation();

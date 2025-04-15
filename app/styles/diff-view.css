@@ -55,11 +55,11 @@
 }
 
 .diff-line-number {
-  @apply w-12 shrink-0 pl-2 py-0.5 text-left font-mono text-color-secondary border-r border-light bg-bolt-elements-background-depth-1;
+  @apply w-12 shrink-0 pl-2 py-0.5 text-left font-mono text-color-secondary border-r border-light bg-webai-elements-background-depth-1;
 }
 
 .diff-line-content {
-  @apply px-4 py-0.5 font-mono whitespace-pre flex-1 group-hover:bg-bolt-elements-background-depth-2 text-color-primary;
+  @apply px-4 py-0.5 font-mono whitespace-pre flex-1 group-hover:bg-webai-elements-background-depth-2 text-color-primary;
 }
 
 /* Cores específicas para adições/remoções */

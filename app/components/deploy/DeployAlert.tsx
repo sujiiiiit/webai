@@ -35,10 +35,10 @@ export default function DeployChatAlert({ alert, clearAlert, postMessage }: Depl
               className={classNames(
                 'text-xl',
                 type === 'success'
-                  ? 'i-ph:check-circle-duotone text-bolt-elements-icon-success'
+                  ? 'i-ph:check-circle-duotone text-webai-elements-icon-success'
                   : type === 'error'
-                    ? 'i-ph:warning-duotone text-bolt-elements-button-danger-text'
-                    : 'i-ph:info-duotone text-bolt-elements-loader-progress',
+                    ? 'i-ph:warning-duotone text-webai-elements-button-danger-text'
+                    : 'i-ph:info-duotone text-webai-elements-loader-progress',
               )}
             ></div>
           </motion.div>
@@ -56,7 +56,7 @@ export default function DeployChatAlert({ alert, clearAlert, postMessage }: Depl
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className={`mt-2 text-sm text-bolt-elements-textSecondary`}
+              className={`mt-2 text-sm text-webai-elements-textSecondary`}
             >
               <p>{description}</p>
 
@@ -70,12 +70,12 @@ export default function DeployChatAlert({ alert, clearAlert, postMessage }: Depl
                         className={classNames(
                           'w-6 h-6 rounded-full flex items-center justify-center',
                           buildStatus === 'running'
-                            ? 'bg-bolt-elements-loader-progress'
+                            ? 'bg-webai-elements-loader-progress'
                             : buildStatus === 'complete'
-                              ? 'bg-bolt-elements-icon-success'
+                              ? 'bg-webai-elements-icon-success'
                               : buildStatus === 'failed'
-                                ? 'bg-bolt-elements-button-danger-background'
-                                : 'bg-bolt-elements-textTertiary',
+                                ? 'bg-webai-elements-button-danger-background'
+                                : 'bg-webai-elements-textTertiary',
                         )}
                       >
                         {buildStatus === 'running' ? (
@@ -95,7 +95,7 @@ export default function DeployChatAlert({ alert, clearAlert, postMessage }: Depl
                     <div
                       className={classNames(
                         'h-0.5 w-8',
-                        buildStatus === 'complete' ? 'bg-bolt-elements-icon-success' : 'bg-bolt-elements-textTertiary',
+                        buildStatus === 'complete' ? 'bg-webai-elements-icon-success' : 'bg-webai-elements-textTertiary',
                       )}
                     ></div>
 
@@ -105,12 +105,12 @@ export default function DeployChatAlert({ alert, clearAlert, postMessage }: Depl
                         className={classNames(
                           'w-6 h-6 rounded-full flex items-center justify-center',
                           deployStatus === 'running'
-                            ? 'bg-bolt-elements-loader-progress'
+                            ? 'bg-webai-elements-loader-progress'
                             : deployStatus === 'complete'
-                              ? 'bg-bolt-elements-icon-success'
+                              ? 'bg-webai-elements-icon-success'
                               : deployStatus === 'failed'
-                                ? 'bg-bolt-elements-button-danger-background'
-                                : 'bg-bolt-elements-textTertiary',
+                                ? 'bg-webai-elements-button-danger-background'
+                                : 'bg-webai-elements-textTertiary',
                         )}
                       >
                         {deployStatus === 'running' ? (
@@ -130,7 +130,7 @@ export default function DeployChatAlert({ alert, clearAlert, postMessage }: Depl
               )}
 
               {content && (
-                <div className="text-xs text-bolt-elements-textSecondary p-2 bg-bolt-elements-background-depth-3 rounded mt-4 mb-4">
+                <div className="text-xs text-webai-elements-textSecondary p-2 bg-webai-elements-background-depth-3 rounded mt-4 mb-4">
                   {content}
                 </div>
               )}
@@ -140,7 +140,7 @@ export default function DeployChatAlert({ alert, clearAlert, postMessage }: Depl
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-bolt-elements-item-contentAccent hover:underline flex items-center"
+                    className="text-webai-elements-item-contentAccent hover:underline flex items-center"
                   >
                     <span className="mr-1">View deployed site</span>
                     <div className="i-ph:arrow-square-out"></div>
@@ -164,10 +164,10 @@ export default function DeployChatAlert({ alert, clearAlert, postMessage }: Depl
                     }
                     className={classNames(
                       `px-2 py-1.5 rounded-md text-sm font-medium`,
-                      'bg-bolt-elements-button-primary-background',
-                      'hover:bg-bolt-elements-button-primary-backgroundHover',
-                      'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bolt-elements-button-danger-background',
-                      'text-bolt-elements-button-primary-text',
+                      'bg-webai-elements-button-primary-background',
+                      'hover:bg-webai-elements-button-primary-backgroundHover',
+                      'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-webai-elements-button-danger-background',
+                      'text-webai-elements-button-primary-text',
                       'flex items-center gap-1.5',
                     )}
                   >
@@ -179,10 +179,10 @@ export default function DeployChatAlert({ alert, clearAlert, postMessage }: Depl
                   onClick={clearAlert}
                   className={classNames(
                     `px-2 py-1.5 rounded-md text-sm font-medium`,
-                    'bg-bolt-elements-button-secondary-background',
-                    'hover:bg-bolt-elements-button-secondary-backgroundHover',
-                    'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bolt-elements-button-secondary-background',
-                    'text-bolt-elements-button-secondary-text',
+                    'bg-webai-elements-button-secondary-background',
+                    'hover:bg-webai-elements-button-secondary-backgroundHover',
+                    'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-webai-elements-button-secondary-background',
+                    'text-webai-elements-button-secondary-text',
                   )}
                 >
                   Dismiss

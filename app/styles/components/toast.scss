@@ -1,13 +1,13 @@
 .Toastify__toast {
   --at-apply: shadow-md;
 
-  background-color: var(--bolt-elements-bg-depth-2);
-  color: var(--bolt-elements-textPrimary);
-  border: 1px solid var(--bolt-elements-borderColor);
+  background-color: var(--webai-elements-bg-depth-2);
+  color: var(--webai-elements-textPrimary);
+  border: 1px solid var(--webai-elements-borderColor);
 }
 
 .Toastify__close-button {
-  color: var(--bolt-elements-item-contentDefault);
+  color: var(--webai-elements-item-contentDefault);
   opacity: 1;
   transition: none;
 

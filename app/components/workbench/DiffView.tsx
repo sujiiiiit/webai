@@ -40,7 +40,7 @@ interface FullscreenButtonProps {
 const FullscreenButton = memo(({ onClick, isFullscreen }: FullscreenButtonProps) => (
   <button
     onClick={onClick}
-    className="ml-4 p-1 rounded hover:bg-bolt-elements-background-depth-3 text-color-secondary hover:text-color-primary transition-colors"
+    className="ml-4 p-1 rounded hover:bg-webai-elements-background-depth-3 text-color-secondary hover:text-color-primary transition-colors"
     title={isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
   >
     <div className={isFullscreen ? 'i-ph:corners-in' : 'i-ph:corners-out'} />
@@ -54,7 +54,7 @@ const FullscreenOverlay = memo(({ isFullscreen, children }: { isFullscreen: bool
 
   return (
     <div className="fixed inset-0 z-[9999] bg-black/50 flex items-center justify-center p-6">
-      <div className="w-full h-full max-w-[90vw] max-h-[90vh] bg-bolt-elements-background-depth-2 rounded-lg border border-light shadow-xl overflow-hidden">
+      <div className="w-full h-full max-w-[90vw] max-h-[90vh] bg-webai-elements-background-depth-2 rounded-lg border border-light shadow-xl overflow-hidden">
         {children}
       </div>
     </div>
@@ -313,9 +313,9 @@ const processChanges = (beforeCode: string, afterCode: string) => {
 };
 
 const lineNumberStyles =
-  'w-9 shrink-0 pl-2 py-1 text-left font-mono text-color-secondary border-r border-light bg-bolt-elements-background-depth-1';
+  'w-9 shrink-0 pl-2 py-1 text-left font-mono text-color-secondary border-r border-light bg-webai-elements-background-depth-1';
 const lineContentStyles =
-  'px-1 py-1 font-mono whitespace-pre flex-1 group-hover:bg-bolt-elements-background-depth-2 text-color-primary';
+  'px-1 py-1 font-mono whitespace-pre flex-1 group-hover:bg-webai-elements-background-depth-2 text-color-primary';
 const diffPanelStyles = 'h-full overflow-auto diff-panel-content';
 
 // Updated color styles for better consistency
@@ -363,7 +363,7 @@ const NoChangesView = memo(
         <p className="font-medium text-color-primary">Files are identical</p>
         <p className="text-sm mt-1">Both versions match exactly</p>
       </div>
-      <div className="mt-4 w-full max-w-2xl bg-bolt-elements-background-depth-1 rounded-lg border border-light overflow-hidden">
+      <div className="mt-4 w-full max-w-2xl bg-webai-elements-background-depth-1 rounded-lg border border-light overflow-hidden">
         <div className="p-2 text-xs font-bold text-color-secondary border-b border-light">
           Current Content
         </div>
@@ -517,7 +517,7 @@ const FileInfo = memo(
     const showStats = additions > 0 || deletions > 0;
 
     return (
-      <div className="flex items-center bg-bolt-elements-background-depth-1 p-2 text-sm text-color-primary shrink-0">
+      <div className="flex items-center bg-webai-elements-background-depth-1 p-2 text-sm text-color-primary shrink-0">
         <div className="i-ph:file mr-2 h-4 w-4 shrink-0" />
         <span className="truncate">{filename}</span>
         <span className="ml-auto shrink-0 flex items-center gap-2">
@@ -714,7 +714,7 @@ export const DiffView = memo(({ fileHistory, setFileHistory }: DiffViewProps) =>
 
   if (!selectedFile || !currentDocument) {
     return (
-      <div className="flex w-full h-full justify-center items-center bg-bolt-elements-background-depth-1 text-color-primary">
+      <div className="flex w-full h-full justify-center items-center bg-webai-elements-background-depth-1 text-color-primary">
         Select a file to view differences
       </div>
     );
@@ -744,7 +744,7 @@ export const DiffView = memo(({ fileHistory, setFileHistory }: DiffViewProps) =>
   } catch (error) {
     console.error('DiffView render error:', error);
     return (
-      <div className="flex w-full h-full justify-center items-center bg-bolt-elements-background-depth-1 text-red-400">
+      <div className="flex w-full h-full justify-center items-center bg-webai-elements-background-depth-1 text-red-400">
         <div className="text-center">
           <div className="i-ph:warning-circle text-4xl mb-2" />
           <p>Failed to render diff view</p>

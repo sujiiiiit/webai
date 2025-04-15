@@ -33,8 +33,8 @@ const FeatureCard = memo(
       layoutId={feature.id}
       className={classNames(
         'relative group cursor-pointer',
-        'bg-bolt-elements-background-depth-2',
-        'hover:bg-bolt-elements-background-depth-3',
+        'bg-webai-elements-background-depth-2',
+        'hover:bg-webai-elements-background-depth-3',
         'transition-colors duration-200',
         'rounded-lg overflow-hidden',
       )}
@@ -45,7 +45,7 @@ const FeatureCard = memo(
       <div className="p-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className={classNames(feature.icon, 'w-5 h-5 text-bolt-elements-textSecondary')} />
+            <div className={classNames(feature.icon, 'w-5 h-5 text-webai-elements-textSecondary')} />
             <div className="flex items-center gap-2">
               <h4 className="font-medium text-color-primary">{feature.title}</h4>
               {feature.beta && (
@@ -60,7 +60,7 @@ const FeatureCard = memo(
           </div>
           <Switch checked={feature.enabled} onCheckedChange={(checked) => onToggle(feature.id, checked)} />
         </div>
-        <p className="mt-2 text-sm text-bolt-elements-textSecondary">{feature.description}</p>
+        <p className="mt-2 text-sm text-webai-elements-textSecondary">{feature.description}</p>
         {feature.tooltip && <p className="mt-1 text-xs text-color-secondary">{feature.tooltip}</p>}
       </div>
     </motion.div>
@@ -92,7 +92,7 @@ const FeatureSection = memo(
         <div className={classNames(icon, 'text-xl text-purple-500')} />
         <div>
           <h3 className="text-lg font-medium text-color-primary">{title}</h3>
-          <p className="text-sm text-bolt-elements-textSecondary">{description}</p>
+          <p className="text-sm text-webai-elements-textSecondary">{description}</p>
         </div>
       </div>
 
@@ -238,8 +238,8 @@ export default function FeaturesTab() {
       <motion.div
         layout
         className={classNames(
-          'bg-bolt-elements-background-depth-2',
-          'hover:bg-bolt-elements-background-depth-3',
+          'bg-webai-elements-background-depth-2',
+          'hover:bg-webai-elements-background-depth-3',
           'transition-all duration-200',
           'rounded-lg p-4',
           'group',
@@ -252,7 +252,7 @@ export default function FeaturesTab() {
           <div
             className={classNames(
               'p-2 rounded-lg text-xl',
-              'bg-bolt-elements-background-depth-3 group-hover:bg-bolt-elements-background-depth-4',
+              'bg-webai-elements-background-depth-3 group-hover:bg-webai-elements-background-depth-4',
               'transition-colors duration-200',
               'text-purple-500',
             )}
@@ -263,7 +263,7 @@ export default function FeaturesTab() {
             <h4 className="text-sm font-medium text-color-primary group-hover:text-purple-500 transition-colors">
               Prompt Library
             </h4>
-            <p className="text-xs text-bolt-elements-textSecondary mt-0.5">
+            <p className="text-xs text-webai-elements-textSecondary mt-0.5">
               Choose a prompt from the library to use as the system prompt
             </p>
           </div>
@@ -275,7 +275,7 @@ export default function FeaturesTab() {
             }}
             className={classNames(
               'p-2 rounded-lg text-sm min-w-[200px]',
-              'bg-bolt-elements-background-depth-3 border border-light',
+              'bg-webai-elements-background-depth-3 border border-light',
               'text-color-primary',
               'focus:outline-none focus:ring-2 focus:ring-purple-500/30',
               'group-hover:border-purple-500/30',

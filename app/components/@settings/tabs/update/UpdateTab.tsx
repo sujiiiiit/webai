@@ -79,7 +79,7 @@ const UpdateProgressDisplay = ({ progress }: { progress: UpdateProgress }) => (
                       {filesOfType.map((file, index) => {
                         const fileName = file.split(': ')[1];
                         return (
-                          <div key={index} className="text-sm text-bolt-elements-textSecondary flex items-center gap-2">
+                          <div key={index} className="text-sm text-webai-elements-textSecondary flex items-center gap-2">
                             <div
                               className={classNames('w-4 h-4', {
                                 'i-ph:pencil-simple': type === 'Modified',
@@ -295,7 +295,7 @@ const UpdateTab = () => {
         <div className="i-ph:arrow-circle-up text-xl text-purple-500" />
         <div>
           <h3 className="text-lg font-medium text-color-primary">Updates</h3>
-          <p className="text-sm text-bolt-elements-textSecondary">Check for and manage application updates</p>
+          <p className="text-sm text-webai-elements-textSecondary">Check for and manage application updates</p>
         </div>
       </motion.div>
 
@@ -315,7 +315,7 @@ const UpdateTab = () => {
           <div className="flex items-center justify-between">
             <div>
               <span className="text-sm text-color-primary">Automatic Updates</span>
-              <p className="text-xs text-bolt-elements-textSecondary">
+              <p className="text-xs text-webai-elements-textSecondary">
                 Automatically check and apply updates when available
               </p>
             </div>
@@ -338,7 +338,7 @@ const UpdateTab = () => {
           <div className="flex items-center justify-between">
             <div>
               <span className="text-sm text-color-primary">In-App Notifications</span>
-              <p className="text-xs text-bolt-elements-textSecondary">Show notifications when updates are available</p>
+              <p className="text-xs text-webai-elements-textSecondary">Show notifications when updates are available</p>
             </div>
             <button
               onClick={() => setUpdateSettings((prev) => ({ ...prev, notifyInApp: !prev.notifyInApp }))}
@@ -359,7 +359,7 @@ const UpdateTab = () => {
           <div className="flex items-center justify-between">
             <div>
               <span className="text-sm text-color-primary">Check Interval</span>
-              <p className="text-xs text-bolt-elements-textSecondary">How often to check for updates</p>
+              <p className="text-xs text-webai-elements-textSecondary">How often to check for updates</p>
             </div>
             <select
               value={updateSettings.checkInterval}
@@ -451,11 +451,11 @@ const UpdateTab = () => {
 
         {/* Show update source information */}
         {updateProgress?.details?.currentCommit && updateProgress?.details?.remoteCommit && (
-          <div className="mt-4 text-sm text-bolt-elements-textSecondary">
+          <div className="mt-4 text-sm text-webai-elements-textSecondary">
             <div className="flex items-center justify-between">
               <div>
                 <p>
-                  Updates are fetched from: <span className="font-mono">stackblitz-labs/bolt.diy</span> (
+                  Updates are fetched from: <span className="font-mono">stackblitz-labs/webai.diy</span> (
                   {isLatestBranch ? 'main' : 'stable'} branch)
                 </p>
                 <p className="mt-1">
@@ -552,8 +552,8 @@ const UpdateTab = () => {
           <DialogTitle>Update Available</DialogTitle>
           <DialogDescription>
             <div className="mt-4">
-              <p className="text-sm text-bolt-elements-textSecondary mb-4">
-                A new version is available from <span className="font-mono">stackblitz-labs/bolt.diy</span> (
+              <p className="text-sm text-webai-elements-textSecondary mb-4">
+                A new version is available from <span className="font-mono">stackblitz-labs/webai.diy</span> (
                 {isLatestBranch ? 'main' : 'stable'} branch)
               </p>
 
@@ -584,7 +584,7 @@ const UpdateTab = () => {
                   <p className="font-medium mb-2">Commit Messages:</p>
                   <div className="bg-[#F5F5F5] dark:bg-[#1A1A1A] rounded-lg p-3 space-y-2">
                     {updateProgress.details.commitMessages.map((msg, index) => (
-                      <div key={index} className="text-sm text-bolt-elements-textSecondary flex items-start gap-2">
+                      <div key={index} className="text-sm text-webai-elements-textSecondary flex items-start gap-2">
                         <div className="i-ph:git-commit text-purple-500 w-4 h-4 mt-0.5 flex-shrink-0" />
                         <span>{msg}</span>
                       </div>
@@ -594,7 +594,7 @@ const UpdateTab = () => {
               )}
 
               {updateProgress?.details?.totalSize && (
-                <div className="flex items-center gap-4 text-sm text-bolt-elements-textSecondary">
+                <div className="flex items-center gap-4 text-sm text-webai-elements-textSecondary">
                   <div className="flex items-center gap-2">
                     <div className="i-ph:file text-purple-500 w-4 h-4" />
                     Total size: {updateProgress.details.totalSize}

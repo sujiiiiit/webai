@@ -200,7 +200,7 @@ export const Preview = memo(() => {
           width: '15px',
           height: '100%',
           cursor: 'ew-resize',
-          background: 'var(--bolt-elements-background-depth-4, rgba(0,0,0,.3))',
+          background: 'var(--webai-elements-background-depth-4, rgba(0,0,0,.3))',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -210,10 +210,10 @@ export const Preview = memo(() => {
           zIndex: 10,
         }}
         onMouseOver={(e) =>
-          (e.currentTarget.style.background = 'var(--bolt-elements-background-depth-4, rgba(0,0,0,.3))')
+          (e.currentTarget.style.background = 'var(--webai-elements-background-depth-4, rgba(0,0,0,.3))')
         }
         onMouseOut={(e) =>
-          (e.currentTarget.style.background = 'var(--bolt-elements-background-depth-3, rgba(0,0,0,.15))')
+          (e.currentTarget.style.background = 'var(--webai-elements-background-depth-3, rgba(0,0,0,.15))')
         }
         title="Drag to resize width"
       >
@@ -379,7 +379,7 @@ export const Preview = memo(() => {
     >
       <div
         style={{
-          color: 'var(--bolt-elements-textSecondary, rgba(0,0,0,0.5))',
+          color: 'var(--webai-elements-textSecondary, rgba(0,0,0,0.5))',
           fontSize: '10px',
           lineHeight: '5px',
           userSelect: 'none',
@@ -634,17 +634,17 @@ export const Preview = memo(() => {
       {isPortDropdownOpen && (
         <div className="z-iframe-overlay w-full h-full absolute" onClick={() => setIsPortDropdownOpen(false)} />
       )}
-      <div className="bg-bolt-elements-background-depth-2 p-2 flex items-center gap-2">
+      <div className="bg-webai-elements-background-depth-2 p-2 flex items-center gap-2">
         <div className="flex items-center gap-2">
           <IconButton icon="i-ph:arrow-clockwise" onClick={reloadPreview} />
           <IconButton
             icon="i-ph:selection"
             onClick={() => setIsSelectionMode(!isSelectionMode)}
-            className={isSelectionMode ? 'bg-bolt-elements-background-depth-3' : ''}
+            className={isSelectionMode ? 'bg-webai-elements-background-depth-3' : ''}
           />
         </div>
 
-        <div className="flex-grow flex items-center gap-1 bg-bolt-elements-preview-addressBar-background border border-light text-bolt-elements-preview-addressBar-text rounded-full px-3 py-1 text-sm hover:bg-bolt-elements-preview-addressBar-backgroundHover hover:focus-within:bg-bolt-elements-preview-addressBar-backgroundActive focus-within:bg-bolt-elements-preview-addressBar-backgroundActive focus-within-border-lightActive focus-within:text-bolt-elements-preview-addressBar-textActive">
+        <div className="flex-grow flex items-center gap-1 bg-webai-elements-preview-addressBar-background border border-light text-webai-elements-preview-addressBar-text rounded-full px-3 py-1 text-sm hover:bg-webai-elements-preview-addressBar-backgroundHover hover:focus-within:bg-webai-elements-preview-addressBar-backgroundActive focus-within:bg-webai-elements-preview-addressBar-backgroundActive focus-within-border-lightActive focus-within:text-webai-elements-preview-addressBar-textActive">
           <input
             title="URL"
             ref={inputRef}
@@ -827,7 +827,7 @@ export const Preview = memo(() => {
             width: isDeviceModeOn ? (showDeviceFrameInPreview ? '100%' : `${widthPercent}%`) : '100%',
             height: '100%',
             overflow: 'auto',
-            background: 'var(--bolt-elements-background-depth-1)',
+            background: 'var(--webai-elements-background-depth-1)',
             position: 'relative',
             display: 'flex',
             justifyContent: 'center',
@@ -922,7 +922,7 @@ export const Preview = memo(() => {
                 <iframe
                   ref={iframeRef}
                   title="preview"
-                  className="border-none w-full h-full bg-bolt-elements-background-depth-1"
+                  className="border-none w-full h-full bg-webai-elements-background-depth-1"
                   src={iframeUrl}
                   sandbox="allow-scripts allow-forms allow-popups allow-modals allow-storage-access-by-user-activation allow-same-origin"
                   allow="cross-origin-isolated"
@@ -935,7 +935,7 @@ export const Preview = memo(() => {
               />
             </>
           ) : (
-            <div className="flex w-full h-full justify-center items-center bg-bolt-elements-background-depth-1 text-color-primary">
+            <div className="flex w-full h-full justify-center items-center bg-webai-elements-background-depth-1 text-color-primary">
               No preview available
             </div>
           )}
@@ -949,8 +949,8 @@ export const Preview = memo(() => {
                   top: '-25px',
                   left: '50%',
                   transform: 'translateX(-50%)',
-                  background: 'var(--bolt-elements-background-depth-3, rgba(0,0,0,0.7))',
-                  color: 'var(--bolt-elements-textPrimary, white)',
+                  background: 'var(--webai-elements-background-depth-3, rgba(0,0,0,0.7))',
+                  color: 'var(--webai-elements-textPrimary, white)',
                   padding: '2px 8px',
                   borderRadius: '4px',
                   fontSize: '12px',

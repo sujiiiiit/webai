@@ -1,107 +1,107 @@
 /* Color Tokens Light Theme */
 :root,
 :root[data-theme='light'] {
-  --bolt-elements-borderColor: rgba(250, 250, 250, 0.1);
-  --bolt-elements-borderColorActive: #8a5fff;
+  --webai-elements-borderColor: rgba(250, 250, 250, 0.1);
+  --webai-elements-borderColorActive: #8a5fff;
 
-  --bolt-elements-bg-depth-1: #ffffff;
-  --bolt-elements-bg-depth-2: #fafafa;
-  --bolt-elements-bg-depth-3: #e5e5e5;
-  --bolt-elements-bg-depth-4: rgba(250, 250, 250, 0.05);
+  --webai-elements-bg-depth-1: #ffffff;
+  --webai-elements-bg-depth-2: #fafafa;
+  --webai-elements-bg-depth-3: #e5e5e5;
+  --webai-elements-bg-depth-4: rgba(250, 250, 250, 0.05);
 
-  --bolt-elements-textPrimary: #0a0a0a;
-  --bolt-elements-textSecondary: #525252;
-  --bolt-elements-textTertiary: #737373;
+  --webai-elements-textPrimary: #0a0a0a;
+  --webai-elements-textSecondary: #525252;
+  --webai-elements-textTertiary: #737373;
 
-  --bolt-elements-code-background: #f5f5f5;
-  --bolt-elements-code-text: #0a0a0a;
+  --webai-elements-code-background: #f5f5f5;
+  --webai-elements-code-text: #0a0a0a;
 
-  --bolt-elements-button-primary-background: rgba(248, 245, 255, 0.1);
-  --bolt-elements-button-primary-backgroundHover: rgba(248, 245, 255, 0.2);
-  --bolt-elements-button-primary-text: #9c7dff;
+  --webai-elements-button-primary-background: rgba(248, 245, 255, 0.1);
+  --webai-elements-button-primary-backgroundHover: rgba(248, 245, 255, 0.2);
+  --webai-elements-button-primary-text: #9c7dff;
 
-  --bolt-elements-button-secondary-background: rgba(250, 250, 250, 0.05);
-  --bolt-elements-button-secondary-backgroundHover: rgba(250, 250, 250, 0.1);
-  --bolt-elements-button-secondary-text: #0a0a0a;
+  --webai-elements-button-secondary-background: rgba(250, 250, 250, 0.05);
+  --webai-elements-button-secondary-backgroundHover: rgba(250, 250, 250, 0.1);
+  --webai-elements-button-secondary-text: #0a0a0a;
 
-  --bolt-elements-button-danger-background: rgba(254, 242, 242, 0.1);
-  --bolt-elements-button-danger-backgroundHover: rgba(254, 242, 242, 0.2);
-  --bolt-elements-button-danger-text: #ef4444;
+  --webai-elements-button-danger-background: rgba(254, 242, 242, 0.1);
+  --webai-elements-button-danger-backgroundHover: rgba(254, 242, 242, 0.2);
+  --webai-elements-button-danger-text: #ef4444;
 
-  --bolt-elements-item-contentDefault: rgba(250, 250, 250, 0.5);
+  --webai-elements-item-contentDefault: rgba(250, 250, 250, 0.5);
   --blue-400: #0a0a0a;
-  --bolt-elements-item-contentAccent: #7645e8;
-  --bolt-elements-item-contentDanger: #ef4444;
-  --bolt-elements-item-backgroundDefault: rgba(0, 0, 0, 0);
-  --bolt-elements-item-backgroundActive: rgba(250, 250, 250, 0.05);
-  --bolt-elements-item-backgroundAccent: rgba(248, 245, 255, 0.1);
-  --bolt-elements-item-backgroundDanger: rgba(254, 242, 242, 0.1);
+  --webai-elements-item-contentAccent: #7645e8;
+  --webai-elements-item-contentDanger: #ef4444;
+  --webai-elements-item-backgroundDefault: rgba(0, 0, 0, 0);
+  --webai-elements-item-backgroundActive: rgba(250, 250, 250, 0.05);
+  --webai-elements-item-backgroundAccent: rgba(248, 245, 255, 0.1);
+  --webai-elements-item-backgroundDanger: rgba(254, 242, 242, 0.1);
 
-  --bolt-elements-loader-background: rgba(250, 250, 250, 0.1);
-  --bolt-elements-loader-progress: #9c7dff;
+  --webai-elements-loader-background: rgba(250, 250, 250, 0.1);
+  --webai-elements-loader-progress: #9c7dff;
 
-  --bolt-elements-artifacts-background: #ffffff;
-  --bolt-elements-artifacts-backgroundHover: rgba(250, 250, 250, 0.02);
-  --bolt-elements-artifacts-borderColor: var(--bolt-elements-borderColor);
-  --bolt-elements-artifacts-inlineCode-background: #f5f5f5;
-  --bolt-elements-artifacts-inlineCode-text: var(--bolt-elements-textPrimary);
+  --webai-elements-artifacts-background: #ffffff;
+  --webai-elements-artifacts-backgroundHover: rgba(250, 250, 250, 0.02);
+  --webai-elements-artifacts-borderColor: var(--webai-elements-borderColor);
+  --webai-elements-artifacts-inlineCode-background: #f5f5f5;
+  --webai-elements-artifacts-inlineCode-text: var(--webai-elements-textPrimary);
 
-  --bolt-elements-actions-background: #ffffff;
-  --bolt-elements-actions-code-background: #262626;
+  --webai-elements-actions-background: #ffffff;
+  --webai-elements-actions-code-background: #262626;
 
-  --bolt-elements-messages-background: #f5f5f5;
-  --bolt-elements-messages-linkColor: #9c7dff;
-  --bolt-elements-messages-code-background: #262626;
-  --bolt-elements-messages-inlineCode-background: #e5e5e5;
-  --bolt-elements-messages-inlineCode-text: #262626;
+  --webai-elements-messages-background: #f5f5f5;
+  --webai-elements-messages-linkColor: #9c7dff;
+  --webai-elements-messages-code-background: #262626;
+  --webai-elements-messages-inlineCode-background: #e5e5e5;
+  --webai-elements-messages-inlineCode-text: #262626;
 
-  --bolt-elements-icon-success: #22c55e;
-  --bolt-elements-icon-error: #ef4444;
-  --bolt-elements-icon-primary: #0a0a0a;
-  --bolt-elements-icon-secondary: #525252;
-  --bolt-elements-icon-tertiary: #737373;
+  --webai-elements-icon-success: #22c55e;
+  --webai-elements-icon-error: #ef4444;
+  --webai-elements-icon-primary: #0a0a0a;
+  --webai-elements-icon-secondary: #525252;
+  --webai-elements-icon-tertiary: #737373;
 
-  --bolt-elements-dividerColor: #f5f5f5;
+  --webai-elements-dividerColor: #f5f5f5;
 
-  --bolt-elements-prompt-background: rgba(255, 255, 255, 0.8);
+  --webai-elements-prompt-background: rgba(255, 255, 255, 0.8);
 
-  --bolt-elements-sidebar-dropdownShadow: rgba(250, 250, 250, 0.1);
-  --bolt-elements-sidebar-buttonBackgroundDefault: rgba(248, 245, 255, 0.1);
-  --bolt-elements-sidebar-buttonBackgroundHover: rgba(248, 245, 255, 0.2);
-  --bolt-elements-sidebar-buttonText: #7645e8;
+  --webai-elements-sidebar-dropdownShadow: rgba(250, 250, 250, 0.1);
+  --webai-elements-sidebar-buttonBackgroundDefault: rgba(248, 245, 255, 0.1);
+  --webai-elements-sidebar-buttonBackgroundHover: rgba(248, 245, 255, 0.2);
+  --webai-elements-sidebar-buttonText: #7645e8;
 
-  --bolt-elements-preview-addressBar-background: #f5f5f5;
-  --bolt-elements-preview-addressBar-backgroundHover: rgba(250, 250, 250, 0.05);
-  --bolt-elements-preview-addressBar-backgroundActive: #ffffff;
-  --bolt-elements-preview-addressBar-text: var(--bolt-elements-textSecondary);
-  --bolt-elements-preview-addressBar-textActive: var(--bolt-elements-textPrimary);
+  --webai-elements-preview-addressBar-background: #f5f5f5;
+  --webai-elements-preview-addressBar-backgroundHover: rgba(250, 250, 250, 0.05);
+  --webai-elements-preview-addressBar-backgroundActive: #ffffff;
+  --webai-elements-preview-addressBar-text: var(--webai-elements-textSecondary);
+  --webai-elements-preview-addressBar-textActive: var(--webai-elements-textPrimary);
 
-  --bolt-elements-terminals-background: #ffffff;
-  --bolt-elements-terminals-buttonBackground: var(--bolt-elements-bg-depth-4);
+  --webai-elements-terminals-background: #ffffff;
+  --webai-elements-terminals-buttonBackground: var(--webai-elements-bg-depth-4);
 
-  --bolt-elements-cta-background: #f5f5f5;
-  --bolt-elements-cta-text: #0a0a0a;
+  --webai-elements-cta-background: #f5f5f5;
+  --webai-elements-cta-text: #0a0a0a;
 
   /* Terminal Colors */
-  --bolt-terminal-background: var(--bolt-elements-terminals-background);
-  --bolt-terminal-foreground: #333333;
-  --bolt-terminal-selection-background: #00000040;
-  --bolt-terminal-black: #000000;
-  --bolt-terminal-red: #cd3131;
-  --bolt-terminal-green: #00bc00;
-  --bolt-terminal-yellow: #949800;
-  --bolt-terminal-blue: #0451a5;
-  --bolt-terminal-magenta: #bc05bc;
-  --bolt-terminal-cyan: #0598bc;
-  --bolt-terminal-white: #555555;
-  --bolt-terminal-brightBlack: #686868;
-  --bolt-terminal-brightRed: #cd3131;
-  --bolt-terminal-brightGreen: #00bc00;
-  --bolt-terminal-brightYellow: #949800;
-  --bolt-terminal-brightBlue: #0451a5;
-  --bolt-terminal-brightMagenta: #bc05bc;
-  --bolt-terminal-brightCyan: #0598bc;
-  --bolt-terminal-brightWhite: #a5a5a5;
+  --webai-terminal-background: var(--webai-elements-terminals-background);
+  --webai-terminal-foreground: #333333;
+  --webai-terminal-selection-background: #00000040;
+  --webai-terminal-black: #000000;
+  --webai-terminal-red: #cd3131;
+  --webai-terminal-green: #00bc00;
+  --webai-terminal-yellow: #949800;
+  --webai-terminal-blue: #0451a5;
+  --webai-terminal-magenta: #bc05bc;
+  --webai-terminal-cyan: #0598bc;
+  --webai-terminal-white: #555555;
+  --webai-terminal-brightBlack: #686868;
+  --webai-terminal-brightRed: #cd3131;
+  --webai-terminal-brightGreen: #00bc00;
+  --webai-terminal-brightYellow: #949800;
+  --webai-terminal-brightBlue: #0451a5;
+  --webai-terminal-brightMagenta: #bc05bc;
+  --webai-terminal-brightCyan: #0598bc;
+  --webai-terminal-brightWhite: #a5a5a5;
 
   --light: rgba(0, 0, 0, 0.1);
   --text-primary: #000;
@@ -122,107 +122,107 @@
 /* Color Tokens Dark Theme */
 :root,
 :root[data-theme='dark'] {
-  --bolt-elements-borderColor: rgba(255, 255, 255, 0.1);
-  --bolt-elements-borderColorActive: #9c7dff;
+  --webai-elements-borderColor: rgba(255, 255, 255, 0.1);
+  --webai-elements-borderColorActive: #9c7dff;
 
-  --bolt-elements-bg-depth-1: #0a0a0a;
-  --bolt-elements-bg-depth-2: #171717;
-  --bolt-elements-bg-depth-3: #262626;
-  --bolt-elements-bg-depth-4: rgba(255, 255, 255, 0.05);
+  --webai-elements-bg-depth-1: #0a0a0a;
+  --webai-elements-bg-depth-2: #171717;
+  --webai-elements-bg-depth-3: #262626;
+  --webai-elements-bg-depth-4: rgba(255, 255, 255, 0.05);
 
-  --bolt-elements-textPrimary: #ffffff;
-  --bolt-elements-textSecondary: #a3a3a3;
-  --bolt-elements-textTertiary: #737373;
+  --webai-elements-textPrimary: #ffffff;
+  --webai-elements-textSecondary: #a3a3a3;
+  --webai-elements-textTertiary: #737373;
 
-  --bolt-elements-code-background: #262626;
-  --bolt-elements-code-text: #ffffff;
+  --webai-elements-code-background: #262626;
+  --webai-elements-code-text: #ffffff;
 
-  --bolt-elements-button-primary-background: rgba(248, 245, 255, 0.1);
-  --bolt-elements-button-primary-backgroundHover: rgba(248, 245, 255, 0.2);
-  --bolt-elements-button-primary-text: #9c7dff;
+  --webai-elements-button-primary-background: rgba(248, 245, 255, 0.1);
+  --webai-elements-button-primary-backgroundHover: rgba(248, 245, 255, 0.2);
+  --webai-elements-button-primary-text: #9c7dff;
 
-  --bolt-elements-button-secondary-background: rgba(255, 255, 255, 0.05);
-  --bolt-elements-button-secondary-backgroundHover: rgba(255, 255, 255, 0.1);
-  --bolt-elements-button-secondary-text: #ffffff;
+  --webai-elements-button-secondary-background: rgba(255, 255, 255, 0.05);
+  --webai-elements-button-secondary-backgroundHover: rgba(255, 255, 255, 0.1);
+  --webai-elements-button-secondary-text: #ffffff;
 
-  --bolt-elements-button-danger-background: rgba(254, 242, 242, 0.1);
-  --bolt-elements-button-danger-backgroundHover: rgba(254, 242, 242, 0.2);
-  --bolt-elements-button-danger-text: #ef4444;
+  --webai-elements-button-danger-background: rgba(254, 242, 242, 0.1);
+  --webai-elements-button-danger-backgroundHover: rgba(254, 242, 242, 0.2);
+  --webai-elements-button-danger-text: #ef4444;
 
-  --bolt-elements-item-contentDefault: rgba(255, 255, 255, 0.5);
+  --webai-elements-item-contentDefault: rgba(255, 255, 255, 0.5);
   --blue-400: #ffffff;
-  --bolt-elements-item-contentAccent: #9c7dff;
-  --bolt-elements-item-contentDanger: #ef4444;
-  --bolt-elements-item-backgroundDefault: rgba(255, 255, 255, 0);
-  --bolt-elements-item-backgroundActive: rgba(255, 255, 255, 0.1);
-  --bolt-elements-item-backgroundAccent: rgba(248, 245, 255, 0.1);
-  --bolt-elements-item-backgroundDanger: rgba(254, 242, 242, 0.1);
+  --webai-elements-item-contentAccent: #9c7dff;
+  --webai-elements-item-contentDanger: #ef4444;
+  --webai-elements-item-backgroundDefault: rgba(255, 255, 255, 0);
+  --webai-elements-item-backgroundActive: rgba(255, 255, 255, 0.1);
+  --webai-elements-item-backgroundAccent: rgba(248, 245, 255, 0.1);
+  --webai-elements-item-backgroundDanger: rgba(254, 242, 242, 0.1);
 
-  --bolt-elements-loader-background: rgba(250, 250, 250, 0.1);
-  --bolt-elements-loader-progress: #9c7dff;
+  --webai-elements-loader-background: rgba(250, 250, 250, 0.1);
+  --webai-elements-loader-progress: #9c7dff;
 
-  --bolt-elements-artifacts-background: #171717;
-  --bolt-elements-artifacts-backgroundHover: rgba(255, 255, 255, 0.05);
-  --bolt-elements-artifacts-borderColor: var(--bolt-elements-borderColor);
-  --bolt-elements-artifacts-inlineCode-background: #262626;
-  --bolt-elements-artifacts-inlineCode-text: #ffffff;
+  --webai-elements-artifacts-background: #171717;
+  --webai-elements-artifacts-backgroundHover: rgba(255, 255, 255, 0.05);
+  --webai-elements-artifacts-borderColor: var(--webai-elements-borderColor);
+  --webai-elements-artifacts-inlineCode-background: #262626;
+  --webai-elements-artifacts-inlineCode-text: #ffffff;
 
-  --bolt-elements-actions-background: #171717;
-  --bolt-elements-actions-code-background: #262626;
+  --webai-elements-actions-background: #171717;
+  --webai-elements-actions-code-background: #262626;
 
-  --bolt-elements-messages-background: #262626;
-  --bolt-elements-messages-linkColor: #9c7dff;
-  --bolt-elements-messages-code-background: #171717;
-  --bolt-elements-messages-inlineCode-background: #404040;
-  --bolt-elements-messages-inlineCode-text: var(--bolt-elements-textPrimary);
+  --webai-elements-messages-background: #262626;
+  --webai-elements-messages-linkColor: #9c7dff;
+  --webai-elements-messages-code-background: #171717;
+  --webai-elements-messages-inlineCode-background: #404040;
+  --webai-elements-messages-inlineCode-text: var(--webai-elements-textPrimary);
 
-  --bolt-elements-icon-success: #4ade80;
-  --bolt-elements-icon-error: #f87171;
-  --bolt-elements-icon-primary: #0a0a0a;
-  --bolt-elements-icon-secondary: #525252;
-  --bolt-elements-icon-tertiary: #737373;
+  --webai-elements-icon-success: #4ade80;
+  --webai-elements-icon-error: #f87171;
+  --webai-elements-icon-primary: #0a0a0a;
+  --webai-elements-icon-secondary: #525252;
+  --webai-elements-icon-tertiary: #737373;
 
-  --bolt-elements-dividerColor: #f5f5f5;
+  --webai-elements-dividerColor: #f5f5f5;
 
-  --bolt-elements-prompt-background: rgba(163, 163, 163, 0.8);
+  --webai-elements-prompt-background: rgba(163, 163, 163, 0.8);
 
-  --bolt-elements-sidebar-dropdownShadow: rgba(163, 163, 163, 0.3);
-  --bolt-elements-sidebar-buttonBackgroundDefault: rgba(248, 245, 255, 0.1);
-  --bolt-elements-sidebar-buttonBackgroundHover: rgba(248, 245, 255, 0.2);
-  --bolt-elements-sidebar-buttonText: #9c7dff;
+  --webai-elements-sidebar-dropdownShadow: rgba(163, 163, 163, 0.3);
+  --webai-elements-sidebar-buttonBackgroundDefault: rgba(248, 245, 255, 0.1);
+  --webai-elements-sidebar-buttonBackgroundHover: rgba(248, 245, 255, 0.2);
+  --webai-elements-sidebar-buttonText: #9c7dff;
 
-  --bolt-elements-preview-addressBar-background: var(--bolt-elements-bg-depth-1);
-  --bolt-elements-preview-addressBar-backgroundHover: rgba(255, 255, 255, 0.05);
-  --bolt-elements-preview-addressBar-backgroundActive: var(--bolt-elements-bg-depth-1);
-  --bolt-elements-preview-addressBar-text: var(--bolt-elements-textSecondary);
-  --bolt-elements-preview-addressBar-textActive: var(--bolt-elements-textPrimary);
+  --webai-elements-preview-addressBar-background: var(--webai-elements-bg-depth-1);
+  --webai-elements-preview-addressBar-backgroundHover: rgba(255, 255, 255, 0.05);
+  --webai-elements-preview-addressBar-backgroundActive: var(--webai-elements-bg-depth-1);
+  --webai-elements-preview-addressBar-text: var(--webai-elements-textSecondary);
+  --webai-elements-preview-addressBar-textActive: var(--webai-elements-textPrimary);
 
-  --bolt-elements-terminals-background: var(--bolt-elements-bg-depth-1);
-  --bolt-elements-terminals-buttonBackground: var(--bolt-elements-bg-depth-3);
+  --webai-elements-terminals-background: var(--webai-elements-bg-depth-1);
+  --webai-elements-terminals-buttonBackground: var(--webai-elements-bg-depth-3);
 
-  --bolt-elements-cta-background: rgba(255, 255, 255, 0.1);
-  --bolt-elements-cta-text: #ffffff;
+  --webai-elements-cta-background: rgba(255, 255, 255, 0.1);
+  --webai-elements-cta-text: #ffffff;
 
   /* Terminal Colors */
-  --bolt-terminal-background: var(--bolt-elements-terminals-background);
-  --bolt-terminal-foreground: #eff0eb;
-  --bolt-terminal-selection-background: #97979b33;
-  --bolt-terminal-black: #000000;
-  --bolt-terminal-red: #ff5c57;
-  --bolt-terminal-green: #5af78e;
-  --bolt-terminal-yellow: #f3f99d;
-  --bolt-terminal-blue: #57c7ff;
-  --bolt-terminal-magenta: #ff6ac1;
-  --bolt-terminal-cyan: #9aedfe;
-  --bolt-terminal-white: #f1f1f0;
-  --bolt-terminal-brightBlack: #686868;
-  --bolt-terminal-brightRed: #ff5c57;
-  --bolt-terminal-brightGreen: #5af78e;
-  --bolt-terminal-brightYellow: #f3f99d;
-  --bolt-terminal-brightBlue: #57c7ff;
-  --bolt-terminal-brightMagenta: #ff6ac1;
-  --bolt-terminal-brightCyan: #9aedfe;
-  --bolt-terminal-brightWhite: #f1f1f0;
+  --webai-terminal-background: var(--webai-elements-terminals-background);
+  --webai-terminal-foreground: #eff0eb;
+  --webai-terminal-selection-background: #97979b33;
+  --webai-terminal-black: #000000;
+  --webai-terminal-red: #ff5c57;
+  --webai-terminal-green: #5af78e;
+  --webai-terminal-yellow: #f3f99d;
+  --webai-terminal-blue: #57c7ff;
+  --webai-terminal-magenta: #ff6ac1;
+  --webai-terminal-cyan: #9aedfe;
+  --webai-terminal-white: #f1f1f0;
+  --webai-terminal-brightBlack: #686868;
+  --webai-terminal-brightRed: #ff5c57;
+  --webai-terminal-brightGreen: #5af78e;
+  --webai-terminal-brightYellow: #f3f99d;
+  --webai-terminal-brightBlue: #57c7ff;
+  --webai-terminal-brightMagenta: #ff6ac1;
+  --webai-terminal-brightCyan: #9aedfe;
+  --webai-terminal-brightWhite: #f1f1f0;
 
   --background: rgb(13, 13, 13);
 
@@ -264,30 +264,30 @@
   --layer-transition:cubic-bezier(0.4, 0, 0.2, 1)
 
   /* Toasts */
-  --toastify-color-progress-success: var(--bolt-elements-icon-success);
-  --toastify-color-progress-error: var(--bolt-elements-icon-error);
+  --toastify-color-progress-success: var(--webai-elements-icon-success);
+  --toastify-color-progress-error: var(--webai-elements-icon-error);
 
   /* Terminal */
-  --bolt-elements-terminal-backgroundColor: var(--bolt-terminal-background);
-  --bolt-elements-terminal-textColor: var(--bolt-terminal-foreground);
-  --bolt-elements-terminal-cursorColor: var(--bolt-terminal-foreground);
-  --bolt-elements-terminal-selection-backgroundColor: var(--bolt-terminal-selection-background);
-  --bolt-elements-terminal-color-black: var(--bolt-terminal-black);
-  --bolt-elements-terminal-color-red: var(--bolt-terminal-red);
-  --bolt-elements-terminal-color-green: var(--bolt-terminal-green);
-  --bolt-elements-terminal-color-yellow: var(--bolt-terminal-yellow);
-  --bolt-elements-terminal-color-blue: var(--bolt-terminal-blue);
-  --bolt-elements-terminal-color-magenta: var(--bolt-terminal-magenta);
-  --bolt-elements-terminal-color-cyan: var(--bolt-terminal-cyan);
-  --bolt-elements-terminal-color-white: var(--bolt-terminal-white);
-  --bolt-elements-terminal-color-brightBlack: var(--bolt-terminal-brightBlack);
-  --bolt-elements-terminal-color-brightRed: var(--bolt-terminal-brightRed);
-  --bolt-elements-terminal-color-brightGreen: var(--bolt-terminal-brightGreen);
-  --bolt-elements-terminal-color-brightYellow: var(--bolt-terminal-brightYellow);
-  --bolt-elements-terminal-color-brightBlue: var(--bolt-terminal-brightBlue);
-  --bolt-elements-terminal-color-brightMagenta: var(--bolt-terminal-brightMagenta);
-  --bolt-elements-terminal-color-brightCyan: var(--bolt-terminal-brightCyan);
-  --bolt-elements-terminal-color-brightWhite: var(--bolt-terminal-brightWhite);
+  --webai-elements-terminal-backgroundColor: var(--webai-terminal-background);
+  --webai-elements-terminal-textColor: var(--webai-terminal-foreground);
+  --webai-elements-terminal-cursorColor: var(--webai-terminal-foreground);
+  --webai-elements-terminal-selection-backgroundColor: var(--webai-terminal-selection-background);
+  --webai-elements-terminal-color-black: var(--webai-terminal-black);
+  --webai-elements-terminal-color-red: var(--webai-terminal-red);
+  --webai-elements-terminal-color-green: var(--webai-terminal-green);
+  --webai-elements-terminal-color-yellow: var(--webai-terminal-yellow);
+  --webai-elements-terminal-color-blue: var(--webai-terminal-blue);
+  --webai-elements-terminal-color-magenta: var(--webai-terminal-magenta);
+  --webai-elements-terminal-color-cyan: var(--webai-terminal-cyan);
+  --webai-elements-terminal-color-white: var(--webai-terminal-white);
+  --webai-elements-terminal-color-brightBlack: var(--webai-terminal-brightBlack);
+  --webai-elements-terminal-color-brightRed: var(--webai-terminal-brightRed);
+  --webai-elements-terminal-color-brightGreen: var(--webai-terminal-brightGreen);
+  --webai-elements-terminal-color-brightYellow: var(--webai-terminal-brightYellow);
+  --webai-elements-terminal-color-brightBlue: var(--webai-terminal-brightBlue);
+  --webai-elements-terminal-color-brightMagenta: var(--webai-terminal-brightMagenta);
+  --webai-elements-terminal-color-brightCyan: var(--webai-terminal-brightCyan);
+  --webai-elements-terminal-color-brightWhite: var(--webai-terminal-brightWhite);
 }
 
 .layer-transition {

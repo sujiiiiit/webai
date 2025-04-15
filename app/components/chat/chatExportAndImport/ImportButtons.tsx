@@ -6,7 +6,7 @@ import { ImportChatIcon } from '~/components/ui/icons';
 import { classNames } from '~/utils/classNames';
 
 type ChatData = {
-  messages?: Message[]; // Standard Bolt format
+  messages?: Message[]; // Standard Webai format
   description?: string; // Optional description
 };
 

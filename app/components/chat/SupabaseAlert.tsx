@@ -99,7 +99,7 @@ export function SupabaseChatAlert({ alert, clearAlert, postMessage }: Props) {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 0.3 }}
-        className="max-w-chat rounded-lg border-l-2 border-l-[#098F5F] border-light bg-bolt-elements-background-depth-2"
+        className="max-w-chat rounded-lg border-l-2 border-l-[#098F5F] border-light bg-webai-elements-background-depth-2"
       >
         {/* Header */}
         <div className="p-4 pb-2">
@@ -112,7 +112,7 @@ export function SupabaseChatAlert({ alert, clearAlert, postMessage }: Props) {
         {/* SQL Content */}
         <div className="px-4">
           {!isConnected ? (
-            <div className="p-3 rounded-md bg-bolt-elements-background-depth-3">
+            <div className="p-3 rounded-md bg-webai-elements-background-depth-3">
               <span className="text-sm text-color-primary">
                 You must first connect to Supabase and select a project.
               </span>
@@ -120,7 +120,7 @@ export function SupabaseChatAlert({ alert, clearAlert, postMessage }: Props) {
           ) : (
             <>
               <div
-                className="flex items-center p-2 rounded-md bg-bolt-elements-background-depth-3 cursor-pointer"
+                className="flex items-center p-2 rounded-md bg-webai-elements-background-depth-3 cursor-pointer"
                 onClick={() => setIsCollapsed(!isCollapsed)}
               >
                 <div className="i-ph:database text-color-primary mr-2"></div>
@@ -133,7 +133,7 @@ export function SupabaseChatAlert({ alert, clearAlert, postMessage }: Props) {
               </div>
 
               {!isCollapsed && content && (
-                <div className="mt-2 p-3 bg-bolt-elements-background-depth-4 rounded-md overflow-auto max-h-60 font-mono text-xs text-bolt-elements-textSecondary">
+                <div className="mt-2 p-3 bg-webai-elements-background-depth-4 rounded-md overflow-auto max-h-60 font-mono text-xs text-webai-elements-textSecondary">
                   <pre>{cleanSqlContent(content)}</pre>
                 </div>
               )}
@@ -143,7 +143,7 @@ export function SupabaseChatAlert({ alert, clearAlert, postMessage }: Props) {
 
         {/* Message and Actions */}
         <div className="p-4">
-          <p className="text-sm text-bolt-elements-textSecondary mb-4">{message}</p>
+          <p className="text-sm text-webai-elements-textSecondary mb-4">{message}</p>
 
           <div className="flex gap-2">
             {showConnectButton ? (

@@ -51,7 +51,7 @@ export const DialogTitle = memo(({ className, children, ...props }: RadixDialog.
 export const DialogDescription = memo(({ className, children, ...props }: RadixDialog.DialogDescriptionProps) => {
   return (
     <RadixDialog.Description
-      className={classNames('text-sm text-bolt-elements-textSecondary mt-1', className)}
+      className={classNames('text-sm text-webai-elements-textSecondary mt-1', className)}
       {...props}
     >
       {children}
@@ -130,7 +130,7 @@ export const Dialog = memo(({ children, className, showCloseButton = true, onClo
               <RadixDialog.Close asChild onClick={onClose}>
                 <IconButton
                   icon="i-ph:x"
-                  className="absolute top-3 right-3 text-color-secondary hover:text-bolt-elements-textSecondary"
+                  className="absolute top-3 right-3 text-color-secondary hover:text-webai-elements-textSecondary"
                 />
               </RadixDialog.Close>
             )}
@@ -222,7 +222,7 @@ export function ConfirmationDialog({
               className={
                 variant === 'destructive'
                   ? 'bg-red-500 text-white hover:bg-red-600'
-                  : 'bg-bolt-elements-item-backgroundAccent text-bolt-elements-item-contentAccent hover:bg-bolt-elements-button-primary-backgroundHover'
+                  : 'bg-webai-elements-item-backgroundAccent text-webai-elements-item-contentAccent hover:bg-webai-elements-button-primary-backgroundHover'
               }
             >
               {isLoading ? (
@@ -347,8 +347,8 @@ export function SelectionDialog({
         className={classNames(
           'flex items-start space-x-3 p-2 rounded-md transition-colors',
           selectedItems.includes(item.id)
-            ? 'bg-bolt-elements-item-backgroundAccent'
-            : 'bg-bolt-elements-bg-depth-2 hover:bg-bolt-elements-item-backgroundActive',
+            ? 'bg-webai-elements-item-backgroundAccent'
+            : 'bg-webai-elements-bg-depth-2 hover:bg-webai-elements-item-backgroundActive',
         )}
         style={{
           ...style,
@@ -367,13 +367,13 @@ export function SelectionDialog({
             className={classNames(
               'text-sm font-medium cursor-pointer',
               selectedItems.includes(item.id)
-                ? 'text-bolt-elements-item-contentAccent'
+                ? 'text-webai-elements-item-contentAccent'
                 : 'text-color-primary',
             )}
           >
             {item.label}
           </Label>
-          {item.description && <p className="text-xs text-bolt-elements-textSecondary">{item.description}</p>}
+          {item.description && <p className="text-xs text-webai-elements-textSecondary">{item.description}</p>}
         </div>
       </div>
     );
@@ -386,26 +386,26 @@ export function SelectionDialog({
           <DialogTitle>{title}</DialogTitle>
           <DialogDescription className="mt-2 mb-4">
             Select the items you want to include and click{' '}
-            <span className="text-bolt-elements-item-contentAccent font-medium">{confirmLabel}</span>.
+            <span className="text-webai-elements-item-contentAccent font-medium">{confirmLabel}</span>.
           </DialogDescription>
 
           <div className="py-4">
             <div className="flex items-center justify-between mb-4">
-              <span className="text-sm font-medium text-bolt-elements-textSecondary">
+              <span className="text-sm font-medium text-webai-elements-textSecondary">
                 {selectedItems.length} of {items.length} selected
               </span>
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={handleSelectAll}
-                className="text-xs h-8 px-2 text-color-primary hover:text-bolt-elements-item-contentAccent hover:bg-bolt-elements-item-backgroundAccent bg-bolt-elements-bg-depth-2 dark:bg-transparent"
+                className="text-xs h-8 px-2 text-color-primary hover:text-webai-elements-item-contentAccent hover:bg-webai-elements-item-backgroundAccent bg-webai-elements-bg-depth-2 dark:bg-transparent"
               >
                 {selectAll ? 'Deselect All' : 'Select All'}
               </Button>
             </div>
 
             <div
-              className="pr-2 border rounded-md border-light bg-bolt-elements-bg-depth-2"
+              className="pr-2 border rounded-md border-light bg-webai-elements-bg-depth-2"
               style={{
                 maxHeight,
               }}
@@ -416,7 +416,7 @@ export function SelectionDialog({
                   width="100%"
                   itemCount={items.length}
                   itemSize={60}
-                  className="scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-bolt-elements-bg-depth-3"
+                  className="scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-webai-elements-bg-depth-3"
                 >
                   {ItemRenderer}
                 </FixedSizeList>
@@ -430,7 +430,7 @@ export function SelectionDialog({
             <Button
               variant="outline"
               onClick={onClose}
-              className="border-light text-color-primary hover:bg-bolt-elements-item-backgroundActive"
+              className="border-light text-color-primary hover:bg-webai-elements-item-backgroundActive"
             >
               Cancel
             </Button>

@@ -299,16 +299,16 @@ export default function NetlifyConnection() {
       <div className="mt-6">
         <Collapsible open={isStatsOpen} onOpenChange={setIsStatsOpen}>
           <CollapsibleTrigger asChild>
-            <div className="flex items-center justify-between p-4 rounded-lg bg-bolt-elements-background dark:bg-bolt-elements-background-depth-2 border border-light dark:border-light hover:border-lightActive/70 dark:hover:border-lightActive/70 transition-all duration-200">
+            <div className="flex items-center justify-between p-4 rounded-lg bg-webai-elements-background dark:bg-webai-elements-background-depth-2 border border-light dark:border-light hover:border-lightActive/70 dark:hover:border-lightActive/70 transition-all duration-200">
               <div className="flex items-center gap-2">
-                <div className="i-ph:chart-bar w-4 h-4 text-bolt-elements-item-contentAccent dark:text-bolt-elements-item-contentAccent" />
+                <div className="i-ph:chart-bar w-4 h-4 text-webai-elements-item-contentAccent dark:text-webai-elements-item-contentAccent" />
                 <span className="text-sm font-medium text-color-primary dark:text-color-primary">
                   Netlify Stats
                 </span>
               </div>
               <div
                 className={classNames(
-                  'i-ph:caret-down w-4 h-4 transform transition-transform duration-200 text-bolt-elements-textSecondary',
+                  'i-ph:caret-down w-4 h-4 transform transition-transform duration-200 text-webai-elements-textSecondary',
                   isStatsOpen ? 'rotate-180' : '',
                 )}
               />
@@ -321,14 +321,14 @@ export default function NetlifyConnection() {
                   variant="outline"
                   className="flex items-center gap-1 text-color-primary dark:text-color-primary"
                 >
-                  <BuildingLibraryIcon className="h-4 w-4 text-bolt-elements-item-contentAccent" />
+                  <BuildingLibraryIcon className="h-4 w-4 text-webai-elements-item-contentAccent" />
                   <span>{connection.stats.totalSites} Sites</span>
                 </Badge>
                 <Badge
                   variant="outline"
                   className="flex items-center gap-1 text-color-primary dark:text-color-primary"
                 >
-                  <RocketLaunchIcon className="h-4 w-4 text-bolt-elements-item-contentAccent" />
+                  <RocketLaunchIcon className="h-4 w-4 text-webai-elements-item-contentAccent" />
                   <span>{deploymentCount} Deployments</span>
                 </Badge>
                 {lastUpdated && (
@@ -336,17 +336,17 @@ export default function NetlifyConnection() {
                     variant="outline"
                     className="flex items-center gap-1 text-color-primary dark:text-color-primary"
                   >
-                    <ClockIcon className="h-4 w-4 text-bolt-elements-item-contentAccent" />
+                    <ClockIcon className="h-4 w-4 text-webai-elements-item-contentAccent" />
                     <span>Updated {formatDistanceToNow(new Date(lastUpdated))} ago</span>
                   </Badge>
                 )}
               </div>
               {sites.length > 0 && (
                 <div className="mt-4 space-y-4">
-                  <div className="bg-bolt-elements-background dark:bg-bolt-elements-background-depth-1 border border-light dark:border-light rounded-lg p-4">
+                  <div className="bg-webai-elements-background dark:bg-webai-elements-background-depth-1 border border-light dark:border-light rounded-lg p-4">
                     <div className="flex items-center justify-between mb-4">
                       <h4 className="text-sm font-medium flex items-center gap-2 text-color-primary dark:text-color-primary">
-                        <BuildingLibraryIcon className="h-4 w-4 text-bolt-elements-item-contentAccent dark:text-bolt-elements-item-contentAccent" />
+                        <BuildingLibraryIcon className="h-4 w-4 text-webai-elements-item-contentAccent dark:text-webai-elements-item-contentAccent" />
                         Your Sites
                       </h4>
                       <Button
@@ -354,11 +354,11 @@ export default function NetlifyConnection() {
                         size="sm"
                         onClick={() => fetchNetlifyStats(connection.token)}
                         disabled={fetchingStats}
-                        className="flex items-center gap-2 text-color-primary dark:text-color-primary hover:bg-bolt-elements-item-backgroundActive/10"
+                        className="flex items-center gap-2 text-color-primary dark:text-color-primary hover:bg-webai-elements-item-backgroundActive/10"
                       >
                         <ArrowPathIcon
                           className={classNames(
-                            'h-4 w-4 text-bolt-elements-item-contentAccent dark:text-bolt-elements-item-contentAccent',
+                            'h-4 w-4 text-webai-elements-item-contentAccent dark:text-webai-elements-item-contentAccent',
                             { 'animate-spin': fetchingStats },
                           )}
                         />
@@ -370,9 +370,9 @@ export default function NetlifyConnection() {
                         <div
                           key={site.id}
                           className={classNames(
-                            'bg-bolt-elements-background dark:bg-bolt-elements-background-depth-1 border rounded-lg p-4 transition-all',
+                            'bg-webai-elements-background dark:bg-webai-elements-background-depth-1 border rounded-lg p-4 transition-all',
                             activeSiteIndex === index
-                              ? 'border-bolt-elements-item-contentAccent bg-bolt-elements-item-backgroundActive/10'
+                              ? 'border-webai-elements-item-contentAccent bg-webai-elements-item-backgroundActive/10'
                               : 'border-light hover:border-lightActive/70',
                           )}
                           onClick={() => {
@@ -381,7 +381,7 @@ export default function NetlifyConnection() {
                         >
                           <div className="flex items-center justify-between">
                             <div className="flex items-center gap-2">
-                              <CloudIcon className="h-5 w-5 text-bolt-elements-item-contentAccent dark:text-bolt-elements-item-contentAccent" />
+                              <CloudIcon className="h-5 w-5 text-webai-elements-item-contentAccent dark:text-webai-elements-item-contentAccent" />
                               <span className="font-medium text-color-primary dark:text-color-primary">
                                 {site.name}
                               </span>
@@ -408,10 +408,10 @@ export default function NetlifyConnection() {
                               href={site.ssl_url || site.url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="text-sm flex items-center gap-1 transition-colors text-bolt-elements-link-text hover:text-bolt-elements-link-textHover dark:text-white dark:hover:text-bolt-elements-link-textHover"
+                              className="text-sm flex items-center gap-1 transition-colors text-webai-elements-link-text hover:text-webai-elements-link-textHover dark:text-white dark:hover:text-webai-elements-link-textHover"
                               onClick={(e) => e.stopPropagation()}
                             >
-                              <CloudIcon className="h-3 w-3 text-bolt-elements-item-contentAccent dark:text-bolt-elements-item-contentAccent" />
+                              <CloudIcon className="h-3 w-3 text-webai-elements-item-contentAccent dark:text-webai-elements-item-contentAccent" />
                               <span className="underline decoration-1 underline-offset-2">
                                 {site.ssl_url || site.url}
                               </span>
@@ -443,7 +443,7 @@ export default function NetlifyConnection() {
                                       disabled={isActionLoading}
                                       className="flex items-center gap-1 text-color-primary dark:text-color-primary"
                                     >
-                                      <action.icon className="h-4 w-4 text-bolt-elements-item-contentAccent dark:text-bolt-elements-item-contentAccent" />
+                                      <action.icon className="h-4 w-4 text-webai-elements-item-contentAccent dark:text-webai-elements-item-contentAccent" />
                                       {action.name}
                                     </Button>
                                   ))}
@@ -452,15 +452,15 @@ export default function NetlifyConnection() {
                               {site.published_deploy && (
                                 <div className="mt-3 text-sm">
                                   <div className="flex items-center gap-1">
-                                    <ClockIcon className="h-4 w-4 text-bolt-elements-item-contentAccent dark:text-bolt-elements-item-contentAccent" />
-                                    <span className="text-bolt-elements-textSecondary dark:text-bolt-elements-textSecondary">
+                                    <ClockIcon className="h-4 w-4 text-webai-elements-item-contentAccent dark:text-webai-elements-item-contentAccent" />
+                                    <span className="text-webai-elements-textSecondary dark:text-webai-elements-textSecondary">
                                       Published {formatDistanceToNow(new Date(site.published_deploy.published_at))} ago
                                     </span>
                                   </div>
                                   {site.published_deploy.branch && (
                                     <div className="flex items-center gap-1 mt-1">
-                                      <CodeBracketIcon className="h-4 w-4 text-bolt-elements-item-contentAccent dark:text-bolt-elements-item-contentAccent" />
-                                      <span className="text-bolt-elements-textSecondary dark:text-bolt-elements-textSecondary">
+                                      <CodeBracketIcon className="h-4 w-4 text-webai-elements-item-contentAccent dark:text-webai-elements-item-contentAccent" />
+                                      <span className="text-webai-elements-textSecondary dark:text-webai-elements-textSecondary">
                                         Branch: {site.published_deploy.branch}
                                       </span>
                                     </div>
@@ -474,10 +474,10 @@ export default function NetlifyConnection() {
                     </div>
                   </div>
                   {activeSiteIndex !== -1 && deploys.length > 0 && (
-                    <div className="bg-bolt-elements-background dark:bg-bolt-elements-background-depth-1 border border-light dark:border-light rounded-lg p-4">
+                    <div className="bg-webai-elements-background dark:bg-webai-elements-background-depth-1 border border-light dark:border-light rounded-lg p-4">
                       <div className="flex items-center justify-between mb-3">
                         <h4 className="text-sm font-medium flex items-center gap-2 text-color-primary dark:text-color-primary">
-                          <BuildingLibraryIcon className="h-4 w-4 text-bolt-elements-item-contentAccent dark:text-bolt-elements-item-contentAccent" />
+                          <BuildingLibraryIcon className="h-4 w-4 text-webai-elements-item-contentAccent dark:text-webai-elements-item-contentAccent" />
                           Recent Deployments
                         </h4>
                       </div>
@@ -485,7 +485,7 @@ export default function NetlifyConnection() {
                         {deploys.map((deploy) => (
                           <div
                             key={deploy.id}
-                            className="bg-bolt-elements-background dark:bg-bolt-elements-background-depth-1 border border-light dark:border-light rounded-lg p-3"
+                            className="bg-webai-elements-background dark:bg-webai-elements-background-depth-1 border border-light dark:border-light rounded-lg p-3"
                           >
                             <div className="flex items-center justify-between">
                               <div className="flex items-center gap-2">
@@ -504,21 +504,21 @@ export default function NetlifyConnection() {
                                   ) : deploy.state === 'error' ? (
                                     <XCircleIcon className="h-4 w-4 text-red-500" />
                                   ) : (
-                                    <BuildingLibraryIcon className="h-4 w-4 text-bolt-elements-item-contentAccent" />
+                                    <BuildingLibraryIcon className="h-4 w-4 text-webai-elements-item-contentAccent" />
                                   )}
                                   <span className="text-color-primary dark:text-color-primary">
                                     {deploy.state}
                                   </span>
                                 </Badge>
                               </div>
-                              <span className="text-xs text-bolt-elements-textSecondary dark:text-bolt-elements-textSecondary">
+                              <span className="text-xs text-webai-elements-textSecondary dark:text-webai-elements-textSecondary">
                                 {formatDistanceToNow(new Date(deploy.created_at))} ago
                               </span>
                             </div>
                             {deploy.branch && (
-                              <div className="mt-2 text-xs text-bolt-elements-textSecondary dark:text-bolt-elements-textSecondary flex items-center gap-1">
-                                <CodeBracketIcon className="h-3 w-3 text-bolt-elements-item-contentAccent dark:text-bolt-elements-item-contentAccent" />
-                                <span className="text-bolt-elements-textSecondary dark:text-bolt-elements-textSecondary">
+                              <div className="mt-2 text-xs text-webai-elements-textSecondary dark:text-webai-elements-textSecondary flex items-center gap-1">
+                                <CodeBracketIcon className="h-3 w-3 text-webai-elements-item-contentAccent dark:text-webai-elements-item-contentAccent" />
+                                <span className="text-webai-elements-textSecondary dark:text-webai-elements-textSecondary">
                                   Branch: {deploy.branch}
                                 </span>
                               </div>
@@ -529,10 +529,10 @@ export default function NetlifyConnection() {
                                   href={deploy.deploy_url}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="flex items-center gap-1 transition-colors text-bolt-elements-link-text hover:text-bolt-elements-link-textHover dark:text-white dark:hover:text-bolt-elements-link-textHover"
+                                  className="flex items-center gap-1 transition-colors text-webai-elements-link-text hover:text-webai-elements-link-textHover dark:text-white dark:hover:text-webai-elements-link-textHover"
                                   onClick={(e) => e.stopPropagation()}
                                 >
-                                  <CloudIcon className="h-3 w-3 text-bolt-elements-item-contentAccent dark:text-bolt-elements-item-contentAccent" />
+                                  <CloudIcon className="h-3 w-3 text-webai-elements-item-contentAccent dark:text-webai-elements-item-contentAccent" />
                                   <span className="underline decoration-1 underline-offset-2">{deploy.deploy_url}</span>
                                 </a>
                               </div>
@@ -545,7 +545,7 @@ export default function NetlifyConnection() {
                                 disabled={isActionLoading}
                                 className="flex items-center gap-1 text-color-primary dark:text-color-primary"
                               >
-                                <BuildingLibraryIcon className="h-4 w-4 text-bolt-elements-item-contentAccent dark:text-bolt-elements-item-contentAccent" />
+                                <BuildingLibraryIcon className="h-4 w-4 text-webai-elements-item-contentAccent dark:text-webai-elements-item-contentAccent" />
                                 Publish
                               </Button>
                               {deploy.state === 'ready' ? (
@@ -556,7 +556,7 @@ export default function NetlifyConnection() {
                                   disabled={isActionLoading}
                                   className="flex items-center gap-1 text-color-primary dark:text-color-primary"
                                 >
-                                  <LockClosedIcon className="h-4 w-4 text-bolt-elements-item-contentAccent dark:text-bolt-elements-item-contentAccent" />
+                                  <LockClosedIcon className="h-4 w-4 text-webai-elements-item-contentAccent dark:text-webai-elements-item-contentAccent" />
                                   Lock
                                 </Button>
                               ) : (
@@ -567,7 +567,7 @@ export default function NetlifyConnection() {
                                   disabled={isActionLoading}
                                   className="flex items-center gap-1 text-color-primary dark:text-color-primary"
                                 >
-                                  <LockOpenIcon className="h-4 w-4 text-bolt-elements-item-contentAccent dark:text-bolt-elements-item-contentAccent" />
+                                  <LockOpenIcon className="h-4 w-4 text-webai-elements-item-contentAccent dark:text-webai-elements-item-contentAccent" />
                                   Unlock
                                 </Button>
                               )}
@@ -578,10 +578,10 @@ export default function NetlifyConnection() {
                     </div>
                   )}
                   {activeSiteIndex !== -1 && builds.length > 0 && (
-                    <div className="bg-bolt-elements-background dark:bg-bolt-elements-background-depth-1 border border-light dark:border-light rounded-lg p-4">
+                    <div className="bg-webai-elements-background dark:bg-webai-elements-background-depth-1 border border-light dark:border-light rounded-lg p-4">
                       <div className="flex items-center justify-between mb-3">
                         <h4 className="text-sm font-medium flex items-center gap-2 text-color-primary dark:text-color-primary">
-                          <CodeBracketIcon className="h-4 w-4 text-bolt-elements-item-contentAccent dark:text-bolt-elements-item-contentAccent" />
+                          <CodeBracketIcon className="h-4 w-4 text-webai-elements-item-contentAccent dark:text-webai-elements-item-contentAccent" />
                           Recent Builds
                         </h4>
                       </div>
@@ -589,7 +589,7 @@ export default function NetlifyConnection() {
                         {builds.map((build) => (
                           <div
                             key={build.id}
-                            className="bg-bolt-elements-background dark:bg-bolt-elements-background-depth-1 border border-light dark:border-light rounded-lg p-3"
+                            className="bg-webai-elements-background dark:bg-webai-elements-background-depth-1 border border-light dark:border-light rounded-lg p-3"
                           >
                             <div className="flex items-center justify-between">
                               <div className="flex items-center gap-2">
@@ -611,13 +611,13 @@ export default function NetlifyConnection() {
                                   </span>
                                 </Badge>
                               </div>
-                              <span className="text-xs text-bolt-elements-textSecondary dark:text-bolt-elements-textSecondary">
+                              <span className="text-xs text-webai-elements-textSecondary dark:text-webai-elements-textSecondary">
                                 {formatDistanceToNow(new Date(build.created_at))} ago
                               </span>
                             </div>
                             {build.error && (
-                              <div className="mt-2 text-xs text-bolt-elements-textDestructive dark:text-bolt-elements-textDestructive flex items-center gap-1">
-                                <XCircleIcon className="h-3 w-3 text-bolt-elements-textDestructive dark:text-bolt-elements-textDestructive" />
+                              <div className="mt-2 text-xs text-webai-elements-textDestructive dark:text-webai-elements-textDestructive flex items-center gap-1">
+                                <XCircleIcon className="h-3 w-3 text-webai-elements-textDestructive dark:text-webai-elements-textDestructive" />
                                 Error: {build.error}
                               </div>
                             )}
@@ -636,7 +636,7 @@ export default function NetlifyConnection() {
   };
 
   return (
-    <div className="space-y-6 bg-bolt-elements-background dark:bg-bolt-elements-background border border-light dark:border-light rounded-lg">
+    <div className="space-y-6 bg-webai-elements-background dark:bg-webai-elements-background border border-light dark:border-light rounded-lg">
       <div className="p-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -649,7 +649,7 @@ export default function NetlifyConnection() {
 
         {!connection.user ? (
           <div className="mt-4">
-            <label className="block text-sm text-bolt-elements-textSecondary dark:text-bolt-elements-textSecondary mb-2">
+            <label className="block text-sm text-webai-elements-textSecondary dark:text-webai-elements-textSecondary mb-2">
               API Token
             </label>
             <input
@@ -659,18 +659,18 @@ export default function NetlifyConnection() {
               placeholder="Enter your Netlify API token"
               className={classNames(
                 'w-full px-3 py-2 rounded-lg text-sm',
-                'bg-bolt-elements-background-depth-1 dark:bg-bolt-elements-background-depth-1',
+                'bg-webai-elements-background-depth-1 dark:bg-webai-elements-background-depth-1',
                 'border border-light dark:border-light',
-                'text-color-primary dark:text-color-primary placeholder-bolt-elements-textTertiary dark:placeholder-bolt-elements-textTertiary',
-                'focus:outline-none focus:ring-1 focus:ring-bolt-elements-item-contentAccent dark:focus:ring-bolt-elements-item-contentAccent',
+                'text-color-primary dark:text-color-primary placeholder-webai-elements-textTertiary dark:placeholder-webai-elements-textTertiary',
+                'focus:outline-none focus:ring-1 focus:ring-webai-elements-item-contentAccent dark:focus:ring-webai-elements-item-contentAccent',
               )}
             />
-            <div className="mt-2 text-sm text-bolt-elements-textSecondary dark:text-bolt-elements-textSecondary">
+            <div className="mt-2 text-sm text-webai-elements-textSecondary dark:text-webai-elements-textSecondary">
               <a
                 href="https://app.netlify.com/user/applications#personal-access-tokens"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-bolt-elements-link-text dark:text-bolt-elements-link-text hover:text-bolt-elements-link-textHover dark:hover:text-bolt-elements-link-textHover flex items-center gap-1"
+                className="text-webai-elements-link-text dark:text-webai-elements-link-text hover:text-webai-elements-link-textHover dark:hover:text-webai-elements-link-textHover flex items-center gap-1"
               >
                 <div className="i-ph:key w-4 h-4" />
                 Get your token
@@ -717,7 +717,7 @@ export default function NetlifyConnection() {
                 <Button
                   variant="outline"
                   onClick={() => window.open('https://app.netlify.com', '_blank', 'noopener,noreferrer')}
-                  className="flex items-center gap-2 hover:bg-bolt-elements-item-backgroundActive/10 hover:text-color-primary dark:hover:text-color-primary transition-colors"
+                  className="flex items-center gap-2 hover:bg-webai-elements-item-backgroundActive/10 hover:text-color-primary dark:hover:text-color-primary transition-colors"
                 >
                   <div className="i-ph:layout-dashboard w-4 h-4" />
                   Dashboard
@@ -726,7 +726,7 @@ export default function NetlifyConnection() {
                   onClick={() => fetchNetlifyStats(connection.token)}
                   disabled={fetchingStats}
                   variant="outline"
-                  className="flex items-center gap-2 hover:bg-bolt-elements-item-backgroundActive/10 hover:text-color-primary dark:hover:text-color-primary transition-colors"
+                  className="flex items-center gap-2 hover:bg-webai-elements-item-backgroundActive/10 hover:text-color-primary dark:hover:text-color-primary transition-colors"
                 >
                   {fetchingStats ? (
                     <>

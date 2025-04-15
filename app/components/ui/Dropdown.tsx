@@ -20,7 +20,7 @@ export const DropdownItem = ({ children, onSelect, className }: DropdownItemProp
     className={classNames(
       'relative flex items-center gap-2 px-3 py-2 rounded-lg text-sm',
       'text-color-primary hover:text-color-primary',
-      'hover:bg-bolt-elements-background-depth-3',
+      'hover:bg-webai-elements-background-depth-3',
       'transition-colors cursor-pointer',
       'outline-none',
       className,
@@ -42,7 +42,7 @@ export const Dropdown = ({ trigger, children, align = 'end', sideOffset = 5 }: D
         <DropdownMenu.Content
           className={classNames(
             'min-w-[220px] rounded-lg p-2',
-            'bg-bolt-elements-background-depth-2',
+            'bg-webai-elements-background-depth-2',
             'border border-light',
             'shadow-lg',
             'animate-in fade-in-80 zoom-in-95',

@@ -699,7 +699,7 @@ const ServiceStatusTab = () => {
             <div
               className={classNames(
                 'w-8 h-8 flex items-center justify-center rounded-lg',
-                'bg-bolt-elements-background-depth-3',
+                'bg-webai-elements-background-depth-3',
                 'text-purple-500',
               )}
             >
@@ -707,20 +707,20 @@ const ServiceStatusTab = () => {
             </div>
             <div>
               <h4 className="text-md font-medium text-color-primary">Service Status</h4>
-              <p className="text-sm text-bolt-elements-textSecondary">
+              <p className="text-sm text-webai-elements-textSecondary">
                 Monitor and test the operational status of cloud LLM providers
               </p>
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-sm text-bolt-elements-textSecondary">
+            <span className="text-sm text-webai-elements-textSecondary">
               Last updated: {lastRefresh.toLocaleTimeString()}
             </span>
             <button
               onClick={() => fetchAllStatuses()}
               className={classNames(
                 'px-3 py-1.5 rounded-lg text-sm',
-                'bg-bolt-elements-background-depth-3 hover:bg-bolt-elements-background-depth-4',
+                'bg-webai-elements-background-depth-3 hover:bg-webai-elements-background-depth-4',
                 'text-color-primary',
                 'transition-all duration-200',
                 'flex items-center gap-2',
@@ -735,7 +735,7 @@ const ServiceStatusTab = () => {
         </div>
 
         {/* API Key Test Section */}
-        <div className="p-4 bg-bolt-elements-background-depth-2 rounded-lg">
+        <div className="p-4 bg-webai-elements-background-depth-2 rounded-lg">
           <h5 className="text-sm font-medium text-color-primary mb-2">Test API Key</h5>
           <div className="flex gap-2">
             <select
@@ -743,7 +743,7 @@ const ServiceStatusTab = () => {
               onChange={(e) => setTestProvider(e.target.value as ProviderName)}
               className={classNames(
                 'flex-1 px-3 py-1.5 rounded-lg text-sm max-w-[200px]',
-                'bg-bolt-elements-background-depth-3 border border-light',
+                'bg-webai-elements-background-depth-3 border border-light',
                 'text-color-primary',
                 'focus:outline-none focus:ring-2 focus:ring-purple-500/30',
               )}
@@ -762,8 +762,8 @@ const ServiceStatusTab = () => {
               placeholder="Enter API key to test"
               className={classNames(
                 'flex-1 px-3 py-1.5 rounded-lg text-sm',
-                'bg-bolt-elements-background-depth-3 border border-light',
-                'text-color-primary placeholder-bolt-elements-textTertiary',
+                'bg-webai-elements-background-depth-3 border border-light',
+                'text-color-primary placeholder-webai-elements-textTertiary',
                 'focus:outline-none focus:ring-2 focus:ring-purple-500/30',
               )}
             />
@@ -798,15 +798,15 @@ const ServiceStatusTab = () => {
 
         {/* Status Grid */}
         {loading && serviceStatuses.length === 0 ? (
-          <div className="text-center py-8 text-bolt-elements-textSecondary">Loading service statuses...</div>
+          <div className="text-center py-8 text-webai-elements-textSecondary">Loading service statuses...</div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {serviceStatuses.map((service, index) => (
               <motion.div
                 key={service.provider}
                 className={classNames(
-                  'bg-bolt-elements-background-depth-2',
-                  'hover:bg-bolt-elements-background-depth-3',
+                  'bg-webai-elements-background-depth-2',
+                  'hover:bg-webai-elements-background-depth-3',
                   'transition-all duration-200',
                   'relative overflow-hidden rounded-lg',
                 )}
@@ -825,7 +825,7 @@ const ServiceStatusTab = () => {
                         <div
                           className={classNames(
                             'w-8 h-8 flex items-center justify-center rounded-lg',
-                            'bg-bolt-elements-background-depth-3',
+                            'bg-webai-elements-background-depth-3',
                             getStatusColor(service.status),
                           )}
                         >
@@ -837,7 +837,7 @@ const ServiceStatusTab = () => {
                       <div>
                         <h4 className="text-sm font-medium text-color-primary">{service.provider}</h4>
                         <div className="space-y-1">
-                          <p className="text-xs text-bolt-elements-textSecondary">
+                          <p className="text-xs text-webai-elements-textSecondary">
                             Last checked: {new Date(service.lastChecked).toLocaleTimeString()}
                           </p>
                           {service.responseTime && (
@@ -858,7 +858,7 @@ const ServiceStatusTab = () => {
                   </div>
                   {service.incidents && service.incidents.length > 0 && (
                     <div className="mt-2 border-t border-light pt-2">
-                      <p className="text-xs font-medium text-bolt-elements-textSecondary mb-1">Recent Incidents:</p>
+                      <p className="text-xs font-medium text-webai-elements-textSecondary mb-1">Recent Incidents:</p>
                       <ul className="text-xs text-color-secondary space-y-1">
                         {service.incidents.map((incident, i) => (
                           <li key={i}>{incident}</li>

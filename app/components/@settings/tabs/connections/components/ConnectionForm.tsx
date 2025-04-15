@@ -46,14 +46,14 @@ export function ConnectionForm({ authState, setAuthState, onSave, onDisconnect }
             </div>
             <div>
               <h3 className="text-lg font-medium text-color-primary">Connection Settings</h3>
-              <p className="text-sm text-bolt-elements-textSecondary">Configure your GitHub connection</p>
+              <p className="text-sm text-webai-elements-textSecondary">Configure your GitHub connection</p>
             </div>
           </div>
         </div>
 
         <form onSubmit={onSave} className="space-y-4">
           <div>
-            <label htmlFor="username" className="block text-sm font-medium text-bolt-elements-textSecondary mb-2">
+            <label htmlFor="username" className="block text-sm font-medium text-webai-elements-textSecondary mb-2">
               GitHub Username
             </label>
             <input
@@ -63,7 +63,7 @@ export function ConnectionForm({ authState, setAuthState, onSave, onDisconnect }
               onChange={(e) => setAuthState((prev: GitHubAuthState) => ({ ...prev, username: e.target.value }))}
               className={classNames(
                 'w-full px-4 py-2.5 bg-[#F5F5F5] dark:bg-[#1A1A1A] border rounded-lg',
-                'text-color-primary placeholder-bolt-elements-textTertiary text-base',
+                'text-color-primary placeholder-webai-elements-textTertiary text-base',
                 'border-[#E5E5E5] dark:border-[#1A1A1A]',
                 'focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500',
                 'transition-all duration-200',
@@ -74,7 +74,7 @@ export function ConnectionForm({ authState, setAuthState, onSave, onDisconnect }
 
           <div>
             <div className="flex items-center justify-between mb-2">
-              <label htmlFor="token" className="block text-sm font-medium text-bolt-elements-textSecondary">
+              <label htmlFor="token" className="block text-sm font-medium text-webai-elements-textSecondary">
                 Personal Access Token
               </label>
               <a
@@ -114,7 +114,7 @@ export function ConnectionForm({ authState, setAuthState, onSave, onDisconnect }
               }
               className={classNames(
                 'w-full px-4 py-2.5 bg-[#F5F5F5] dark:bg-[#1A1A1A] border rounded-lg',
-                'text-color-primary placeholder-bolt-elements-textTertiary text-base',
+                'text-color-primary placeholder-webai-elements-textTertiary text-base',
                 'border-[#E5E5E5] dark:border-[#1A1A1A]',
                 'focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500',
                 'transition-all duration-200',

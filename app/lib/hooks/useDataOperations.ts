@@ -89,7 +89,7 @@ export function useDataOperations({
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'bolt-settings.json';
+      a.download = 'webai-settings.json';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -163,7 +163,7 @@ export function useDataOperations({
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'bolt-settings-selected.json';
+        a.download = 'webai-settings-selected.json';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -263,7 +263,7 @@ export function useDataOperations({
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'bolt-chats.json';
+      a.download = 'webai-chats.json';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -377,7 +377,7 @@ export function useDataOperations({
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'bolt-chats-selected.json';
+        a.download = 'webai-chats-selected.json';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -748,7 +748,7 @@ export function useDataOperations({
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'bolt-api-keys-template.json';
+      a.download = 'webai-api-keys-template.json';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -803,7 +803,7 @@ export function useDataOperations({
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'bolt-api-keys.json';
+      a.download = 'webai-api-keys.json';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);

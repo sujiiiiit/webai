@@ -490,11 +490,11 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                       }}
                       onDragLeave={(e) => {
                         e.preventDefault();
-                        e.currentTarget.style.border = '1px solid var(--bolt-elements-borderColor)';
+                        e.currentTarget.style.border = '1px solid var(--webai-elements-borderColor)';
                       }}
                       onDrop={(e) => {
                         e.preventDefault();
-                        e.currentTarget.style.border = '1px solid var(--bolt-elements-borderColor)';
+                        e.currentTarget.style.border = '1px solid var(--webai-elements-borderColor)';
 
                         const files = Array.from(e.dataTransfer.files);
                         files.forEach((file) => {
@@ -606,9 +606,9 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                         {/* <IconButton
                           title="Model Settings"
                           className={classNames('transition-all flex items-center gap-1', {
-                            'bg-bolt-elements-item-backgroundAccent text-bolt-elements-item-contentAccent':
+                            'bg-webai-elements-item-backgroundAccent text-webai-elements-item-contentAccent':
                               isModelSettingsCollapsed,
-                            'bg-bolt-elements-item-backgroundDefault text-bolt-elements-item-contentDefault':
+                            'bg-webai-elements-item-backgroundDefault text-webai-elements-item-contentDefault':
                               !isModelSettingsCollapsed,
                           })}
                           onClick={() => setIsModelSettingsCollapsed(!isModelSettingsCollapsed)}

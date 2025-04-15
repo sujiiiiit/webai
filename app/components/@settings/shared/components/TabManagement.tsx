@@ -149,7 +149,7 @@ export const TabManagement = () => {
             <div
               className={classNames(
                 'w-8 h-8 flex items-center justify-center rounded-lg',
-                'bg-bolt-elements-background-depth-3',
+                'bg-webai-elements-background-depth-3',
                 'text-purple-500',
               )}
             >
@@ -157,7 +157,7 @@ export const TabManagement = () => {
             </div>
             <div>
               <h4 className="text-md font-medium text-color-primary">Tab Management</h4>
-              <p className="text-sm text-bolt-elements-textSecondary">Configure visible tabs and their order</p>
+              <p className="text-sm text-webai-elements-textSecondary">Configure visible tabs and their order</p>
             </div>
           </div>
 
@@ -173,10 +173,10 @@ export const TabManagement = () => {
               placeholder="Search tabs..."
               className={classNames(
                 'w-full pl-10 pr-4 py-2 rounded-lg',
-                'bg-bolt-elements-background-depth-2',
+                'bg-webai-elements-background-depth-2',
                 'border border-light',
                 'text-color-primary',
-                'placeholder-bolt-elements-textTertiary',
+                'placeholder-webai-elements-textTertiary',
                 'focus:outline-none focus:ring-2 focus:ring-purple-500/30',
                 'transition-all duration-200',
               )}
@@ -201,9 +201,9 @@ export const TabManagement = () => {
               <motion.div
                 key={tab.id}
                 className={classNames(
-                  'rounded-lg border bg-bolt-elements-background text-color-primary',
-                  'bg-bolt-elements-background-depth-2',
-                  'hover:bg-bolt-elements-background-depth-3',
+                  'rounded-lg border bg-webai-elements-background text-color-primary',
+                  'bg-webai-elements-background-depth-2',
+                  'hover:bg-webai-elements-background-depth-3',
                   'transition-all duration-200',
                   'relative overflow-hidden group',
                 )}
@@ -223,9 +223,9 @@ export const TabManagement = () => {
                   <motion.div
                     className={classNames(
                       'w-10 h-10 flex items-center justify-center rounded-xl',
-                      'bg-bolt-elements-background-depth-3 group-hover:bg-bolt-elements-background-depth-4',
+                      'bg-webai-elements-background-depth-3 group-hover:bg-webai-elements-background-depth-4',
                       'transition-all duration-200',
-                      tab.visible ? 'text-purple-500' : 'text-bolt-elements-textSecondary',
+                      tab.visible ? 'text-purple-500' : 'text-webai-elements-textSecondary',
                     )}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -246,7 +246,7 @@ export const TabManagement = () => {
                           </h4>
                           {BETA_TABS.has(tab.id) && <BetaLabel />}
                         </div>
-                        <p className="text-xs text-bolt-elements-textSecondary mt-0.5">
+                        <p className="text-xs text-webai-elements-textSecondary mt-0.5">
                           {tab.visible ? 'Visible in user mode' : 'Hidden in user mode'}
                         </p>
                       </div>
@@ -295,9 +295,9 @@ export const TabManagement = () => {
               <motion.div
                 key={tab.id}
                 className={classNames(
-                  'rounded-lg border bg-bolt-elements-background text-color-primary',
-                  'bg-bolt-elements-background-depth-2',
-                  'hover:bg-bolt-elements-background-depth-3',
+                  'rounded-lg border bg-webai-elements-background text-color-primary',
+                  'bg-webai-elements-background-depth-2',
+                  'hover:bg-webai-elements-background-depth-3',
                   'transition-all duration-200',
                   'relative overflow-hidden group',
                 )}
@@ -317,9 +317,9 @@ export const TabManagement = () => {
                   <motion.div
                     className={classNames(
                       'w-10 h-10 flex items-center justify-center rounded-xl',
-                      'bg-bolt-elements-background-depth-3 group-hover:bg-bolt-elements-background-depth-4',
+                      'bg-webai-elements-background-depth-3 group-hover:bg-webai-elements-background-depth-4',
                       'transition-all duration-200',
-                      tab.visible ? 'text-purple-500' : 'text-bolt-elements-textSecondary',
+                      tab.visible ? 'text-purple-500' : 'text-webai-elements-textSecondary',
                     )}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -340,7 +340,7 @@ export const TabManagement = () => {
                           </h4>
                           {BETA_TABS.has(tab.id) && <BetaLabel />}
                         </div>
-                        <p className="text-xs text-bolt-elements-textSecondary mt-0.5">
+                        <p className="text-xs text-webai-elements-textSecondary mt-0.5">
                           {tab.visible ? 'Visible in user mode' : 'Hidden in user mode'}
                         </p>
                       </div>

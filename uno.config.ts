@@ -5,7 +5,7 @@ import { defineConfig, presetIcons, presetUno, transformerDirectives } from 'uno
 
 const iconPaths = globSync('./icons/*.svg');
 
-const collectionName = 'bolt';
+const collectionName = 'webai';
 
 const customIconCollection = iconPaths.reduce(
   (acc, iconPath) => {
@@ -97,11 +97,11 @@ const COLOR_PRIMITIVES = {
 };
 
 export default defineConfig({
-  safelist: [...Object.keys(customIconCollection[collectionName] || {}).map((x) => `i-bolt:${x}`)],
+  safelist: [...Object.keys(customIconCollection[collectionName] || {}).map((x) => `i-webai:${x}`)],
   shortcuts: {
-    'bolt-ease-cubic-bezier': 'ease-[cubic-bezier(0.4,0,0.2,1)]',
-    'transition-theme': 'transition-[background-color,border-color,color] duration-150 bolt-ease-cubic-bezier',
-    kdb: 'bg-vs text-bolt-elements-code-text py-1 px-1.5 rounded-md',
+    'webai-ease-cubic-bezier': 'ease-[cubic-bezier(0.4,0,0.2,1)]',
+    'transition-theme': 'transition-[background-color,border-color,color] duration-150 webai-ease-cubic-bezier',
+    kdb: 'bg-vs text-webai-elements-code-text py-1 px-1.5 rounded-md',
     'max-w-chat': 'max-w-[var(--chat-max-width)]',
   },
 
@@ -128,115 +128,115 @@ export default defineConfig({
         secondary: 'var(--text-secondary)',
       },
 
-      bolt: {
+      webai: {
         elements: {
-          borderColor: 'var(--bolt-elements-borderColor)',
-          borderColorActive: 'var(--bolt-elements-borderColorActive)',
+          borderColor: 'var(--webai-elements-borderColor)',
+          borderColorActive: 'var(--webai-elements-borderColorActive)',
           background: {
             depth: {
-              1: 'var(--bolt-elements-bg-depth-1)',
-              2: 'var(--bolt-elements-bg-depth-2)',
-              3: 'var(--bolt-elements-bg-depth-3)',
-              4: 'var(--bolt-elements-bg-depth-4)',
+              1: 'var(--webai-elements-bg-depth-1)',
+              2: 'var(--webai-elements-bg-depth-2)',
+              3: 'var(--webai-elements-bg-depth-3)',
+              4: 'var(--webai-elements-bg-depth-4)',
             },
           },
-          textPrimary: 'var(--bolt-elements-textPrimary)',
-          textSecondary: 'var(--bolt-elements-textSecondary)',
-          textTertiary: 'var(--bolt-elements-textTertiary)',
+          textPrimary: 'var(--webai-elements-textPrimary)',
+          textSecondary: 'var(--webai-elements-textSecondary)',
+          textTertiary: 'var(--webai-elements-textTertiary)',
           code: {
-            background: 'var(--bolt-elements-code-background)',
-            text: 'var(--bolt-elements-code-text)',
+            background: 'var(--webai-elements-code-background)',
+            text: 'var(--webai-elements-code-text)',
           },
           button: {
             primary: {
-              background: 'var(--bolt-elements-button-primary-background)',
-              backgroundHover: 'var(--bolt-elements-button-primary-backgroundHover)',
-              text: 'var(--bolt-elements-button-primary-text)',
+              background: 'var(--webai-elements-button-primary-background)',
+              backgroundHover: 'var(--webai-elements-button-primary-backgroundHover)',
+              text: 'var(--webai-elements-button-primary-text)',
             },
             secondary: {
-              background: 'var(--bolt-elements-button-secondary-background)',
-              backgroundHover: 'var(--bolt-elements-button-secondary-backgroundHover)',
-              text: 'var(--bolt-elements-button-secondary-text)',
+              background: 'var(--webai-elements-button-secondary-background)',
+              backgroundHover: 'var(--webai-elements-button-secondary-backgroundHover)',
+              text: 'var(--webai-elements-button-secondary-text)',
             },
             danger: {
-              background: 'var(--bolt-elements-button-danger-background)',
-              backgroundHover: 'var(--bolt-elements-button-danger-backgroundHover)',
-              text: 'var(--bolt-elements-button-danger-text)',
+              background: 'var(--webai-elements-button-danger-background)',
+              backgroundHover: 'var(--webai-elements-button-danger-backgroundHover)',
+              text: 'var(--webai-elements-button-danger-text)',
             },
           },
           item: {
-            contentDefault: 'var(--bolt-elements-item-contentDefault)',
+            contentDefault: 'var(--webai-elements-item-contentDefault)',
             contentActive: 'var(--blue-400)',
-            contentAccent: 'var(--bolt-elements-item-contentAccent)',
-            contentDanger: 'var(--bolt-elements-item-contentDanger)',
-            backgroundDefault: 'var(--bolt-elements-item-backgroundDefault)',
-            backgroundActive: 'var(--bolt-elements-item-backgroundActive)',
-            backgroundAccent: 'var(--bolt-elements-item-backgroundAccent)',
-            backgroundDanger: 'var(--bolt-elements-item-backgroundDanger)',
+            contentAccent: 'var(--webai-elements-item-contentAccent)',
+            contentDanger: 'var(--webai-elements-item-contentDanger)',
+            backgroundDefault: 'var(--webai-elements-item-backgroundDefault)',
+            backgroundActive: 'var(--webai-elements-item-backgroundActive)',
+            backgroundAccent: 'var(--webai-elements-item-backgroundAccent)',
+            backgroundDanger: 'var(--webai-elements-item-backgroundDanger)',
           },
           actions: {
-            background: 'var(--bolt-elements-actions-background)',
+            background: 'var(--webai-elements-actions-background)',
             code: {
-              background: 'var(--bolt-elements-actions-code-background)',
+              background: 'var(--webai-elements-actions-code-background)',
             },
           },
           artifacts: {
-            background: 'var(--bolt-elements-artifacts-background)',
-            backgroundHover: 'var(--bolt-elements-artifacts-backgroundHover)',
-            borderColor: 'var(--bolt-elements-artifacts-borderColor)',
+            background: 'var(--webai-elements-artifacts-background)',
+            backgroundHover: 'var(--webai-elements-artifacts-backgroundHover)',
+            borderColor: 'var(--webai-elements-artifacts-borderColor)',
             inlineCode: {
-              background: 'var(--bolt-elements-artifacts-inlineCode-background)',
-              text: 'var(--bolt-elements-artifacts-inlineCode-text)',
+              background: 'var(--webai-elements-artifacts-inlineCode-background)',
+              text: 'var(--webai-elements-artifacts-inlineCode-text)',
             },
           },
           messages: {
-            background: 'var(--bolt-elements-messages-background)',
-            linkColor: 'var(--bolt-elements-messages-linkColor)',
+            background: 'var(--webai-elements-messages-background)',
+            linkColor: 'var(--webai-elements-messages-linkColor)',
             code: {
-              background: 'var(--bolt-elements-messages-code-background)',
+              background: 'var(--webai-elements-messages-code-background)',
             },
             inlineCode: {
-              background: 'var(--bolt-elements-messages-inlineCode-background)',
-              text: 'var(--bolt-elements-messages-inlineCode-text)',
+              background: 'var(--webai-elements-messages-inlineCode-background)',
+              text: 'var(--webai-elements-messages-inlineCode-text)',
             },
           },
           icon: {
-            success: 'var(--bolt-elements-icon-success)',
-            error: 'var(--bolt-elements-icon-error)',
-            primary: 'var(--bolt-elements-icon-primary)',
-            secondary: 'var(--bolt-elements-icon-secondary)',
-            tertiary: 'var(--bolt-elements-icon-tertiary)',
+            success: 'var(--webai-elements-icon-success)',
+            error: 'var(--webai-elements-icon-error)',
+            primary: 'var(--webai-elements-icon-primary)',
+            secondary: 'var(--webai-elements-icon-secondary)',
+            tertiary: 'var(--webai-elements-icon-tertiary)',
           },
           preview: {
             addressBar: {
-              background: 'var(--bolt-elements-preview-addressBar-background)',
-              backgroundHover: 'var(--bolt-elements-preview-addressBar-backgroundHover)',
-              backgroundActive: 'var(--bolt-elements-preview-addressBar-backgroundActive)',
-              text: 'var(--bolt-elements-preview-addressBar-text)',
-              textActive: 'var(--bolt-elements-preview-addressBar-textActive)',
+              background: 'var(--webai-elements-preview-addressBar-background)',
+              backgroundHover: 'var(--webai-elements-preview-addressBar-backgroundHover)',
+              backgroundActive: 'var(--webai-elements-preview-addressBar-backgroundActive)',
+              text: 'var(--webai-elements-preview-addressBar-text)',
+              textActive: 'var(--webai-elements-preview-addressBar-textActive)',
             },
           },
           terminals: {
-            background: 'var(--bolt-elements-terminals-background)',
-            buttonBackground: 'var(--bolt-elements-terminals-buttonBackground)',
+            background: 'var(--webai-elements-terminals-background)',
+            buttonBackground: 'var(--webai-elements-terminals-buttonBackground)',
           },
-          dividerColor: 'var(--bolt-elements-dividerColor)',
+          dividerColor: 'var(--webai-elements-dividerColor)',
           loader: {
-            background: 'var(--bolt-elements-loader-background)',
-            progress: 'var(--bolt-elements-loader-progress)',
+            background: 'var(--webai-elements-loader-background)',
+            progress: 'var(--webai-elements-loader-progress)',
           },
           prompt: {
-            background: 'var(--bolt-elements-prompt-background)',
+            background: 'var(--webai-elements-prompt-background)',
           },
           sidebar: {
-            dropdownShadow: 'var(--bolt-elements-sidebar-dropdownShadow)',
-            buttonBackgroundDefault: 'var(--bolt-elements-sidebar-buttonBackgroundDefault)',
-            buttonBackgroundHover: 'var(--bolt-elements-sidebar-buttonBackgroundHover)',
-            buttonText: 'var(--bolt-elements-sidebar-buttonText)',
+            dropdownShadow: 'var(--webai-elements-sidebar-dropdownShadow)',
+            buttonBackgroundDefault: 'var(--webai-elements-sidebar-buttonBackgroundDefault)',
+            buttonBackgroundHover: 'var(--webai-elements-sidebar-buttonBackgroundHover)',
+            buttonText: 'var(--webai-elements-sidebar-buttonText)',
           },
           cta: {
-            background: 'var(--bolt-elements-cta-background)',
-            text: 'var(--bolt-elements-cta-text)',
+            background: 'var(--webai-elements-cta-background)',
+            text: 'var(--webai-elements-cta-text)',
           },
         },
       },

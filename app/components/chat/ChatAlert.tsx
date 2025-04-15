@@ -15,8 +15,8 @@ export default function ChatAlert({ alert, clearAlert, postMessage }: Props) {
   const isPreview = source === 'preview';
   const title = isPreview ? 'Preview Error' : 'Terminal Error';
   const message = isPreview
-    ? 'We encountered an error while running the preview. Would you like Bolt to analyze and help resolve this issue?'
-    : 'We encountered an error while running terminal commands. Would you like Bolt to analyze and help resolve this issue?';
+    ? 'We encountered an error while running the preview. Would you like Webai to analyze and help resolve this issue?'
+    : 'We encountered an error while running terminal commands. Would you like Webai to analyze and help resolve this issue?';
 
   return (
     <AnimatePresence>
@@ -44,7 +44,7 @@ export default function ChatAlert({ alert, clearAlert, postMessage }: Props) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className={`mt-2 text-sm text-bolt-elements-textSecondary`}
+              className={`mt-2 text-sm text-webai-elements-textSecondary`}
             >
               <p>{message}</p>
               {description && (

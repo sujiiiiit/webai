@@ -92,7 +92,7 @@ export default function VercelConnection() {
         {!connection.user ? (
           <div className="space-y-4">
             <div>
-              <label className="block text-sm text-bolt-elements-textSecondary mb-2">Personal Access Token</label>
+              <label className="block text-sm text-webai-elements-textSecondary mb-2">Personal Access Token</label>
               <input
                 type="password"
                 value={connection.token}
@@ -103,17 +103,17 @@ export default function VercelConnection() {
                   'w-full px-3 py-2 rounded-lg text-sm',
                   'bg-[#F8F8F8] dark:bg-[#1A1A1A]',
                   'border border-[#E5E5E5] dark:border-[#333333]',
-                  'text-color-primary placeholder-bolt-elements-textTertiary',
-                  'focus:outline-none focus:ring-1 focus:ring-bolt-elements-borderColorActive',
+                  'text-color-primary placeholder-webai-elements-textTertiary',
+                  'focus:outline-none focus:ring-1 focus:ring-webai-elements-borderColorActive',
                   'disabled:opacity-50',
                 )}
               />
-              <div className="mt-2 text-sm text-bolt-elements-textSecondary">
+              <div className="mt-2 text-sm text-webai-elements-textSecondary">
                 <a
                   href="https://vercel.com/account/tokens"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-bolt-elements-borderColorActive hover:underline inline-flex items-center gap-1"
+                  className="text-webai-elements-borderColorActive hover:underline inline-flex items-center gap-1"
                 >
                   Get your token
                   <div className="i-ph:arrow-square-out w-4 h-4" />
@@ -159,7 +159,7 @@ export default function VercelConnection() {
                   <div className="i-ph:plug w-4 h-4" />
                   Disconnect
                 </button>
-                <span className="text-sm text-bolt-elements-textSecondary flex items-center gap-1">
+                <span className="text-sm text-webai-elements-textSecondary flex items-center gap-1">
                   <div className="i-ph:check-circle w-4 h-4 text-green-500" />
                   Connected to Vercel
                 </span>
@@ -181,14 +181,14 @@ export default function VercelConnection() {
                 <h4 className="text-sm font-medium text-color-primary">
                   {connection.user?.username || connection.user?.user?.username || 'Vercel User'}
                 </h4>
-                <p className="text-sm text-bolt-elements-textSecondary">
+                <p className="text-sm text-webai-elements-textSecondary">
                   {connection.user?.email || connection.user?.user?.email || 'No email available'}
                 </p>
               </div>
             </div>
 
             {fetchingStats ? (
-              <div className="flex items-center gap-2 text-sm text-bolt-elements-textSecondary">
+              <div className="flex items-center gap-2 text-sm text-webai-elements-textSecondary">
                 <div className="i-ph:spinner-gap w-4 h-4 animate-spin" />
                 Fetching Vercel projects...
               </div>
@@ -220,17 +220,17 @@ export default function VercelConnection() {
                         <div className="flex items-center justify-between">
                           <div>
                             <h5 className="text-sm font-medium text-color-primary flex items-center gap-2">
-                              <div className="i-ph:globe w-4 h-4 text-bolt-elements-borderColorActive" />
+                              <div className="i-ph:globe w-4 h-4 text-webai-elements-borderColorActive" />
                               {project.name}
                             </h5>
-                            <div className="flex items-center gap-2 mt-2 text-xs text-bolt-elements-textSecondary">
+                            <div className="flex items-center gap-2 mt-2 text-xs text-webai-elements-textSecondary">
                               {project.targets?.production?.alias && project.targets.production.alias.length > 0 ? (
                                 <>
                                   <a
                                     href={`https://${project.targets.production.alias.find((a: string) => a.endsWith('.vercel.app') && !a.includes('-projects.vercel.app')) || project.targets.production.alias[0]}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="hover:text-bolt-elements-borderColorActive"
+                                    className="hover:text-webai-elements-borderColorActive"
                                   >
                                     {project.targets.production.alias.find(
                                       (a: string) => a.endsWith('.vercel.app') && !a.includes('-projects.vercel.app'),
@@ -248,7 +248,7 @@ export default function VercelConnection() {
                                     href={`https://${project.latestDeployments[0].url}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="hover:text-bolt-elements-borderColorActive"
+                                    className="hover:text-webai-elements-borderColorActive"
                                   >
                                     {project.latestDeployments[0].url}
                                   </a>
@@ -262,7 +262,7 @@ export default function VercelConnection() {
                             </div>
                           </div>
                           {project.framework && (
-                            <div className="text-xs text-bolt-elements-textSecondary px-2 py-1 rounded-md bg-[#F0F0F0] dark:bg-[#252525]">
+                            <div className="text-xs text-webai-elements-textSecondary px-2 py-1 rounded-md bg-[#F0F0F0] dark:bg-[#252525]">
                               <span className="flex items-center gap-1">
                                 <div className="i-ph:code w-3 h-3" />
                                 {project.framework}
@@ -274,7 +274,7 @@ export default function VercelConnection() {
                     ))}
                   </div>
                 ) : isProjectsExpanded ? (
-                  <div className="text-sm text-bolt-elements-textSecondary flex items-center gap-2">
+                  <div className="text-sm text-webai-elements-textSecondary flex items-center gap-2">
                     <div className="i-ph:info w-4 h-4" />
                     No projects found in your Vercel account
                   </div>
